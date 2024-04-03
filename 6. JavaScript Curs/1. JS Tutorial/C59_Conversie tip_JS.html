@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Numbers</h1>
+<h2>The Number() Method</h2>
+<p>The Number() metod converts a variable (or value) into a number:</p>
+<p id="demo1"></p>
+
+<script>
+    document.getElementById("demo1").innerHTML =
+        Number("3.14") + "<br>" +
+        Number(Math.PI) + "<br>" +
+        Number("    ") + "<br>" +
+        Number("") + "<br>" +
+        Number("99 88") + "<br>" +
+        Number("John") + "<br>";
+</script>
+
+
+<h2>The JavaScript typeof Operator</h2>
+<p>The typeof operator returns the type of a variable or expression:</p>
+<p id="demo2"></p>
+
+<script>
+    let y = "5";
+    let x = +y;
+    document.getElementById("demo2").innerHTML = typeof y + "<br>" + typeof x;
+</script>
+
+
+<h2>The JavaScript typeof Operator</h2>
+<p>The typeof operator returns the type of a variable or expression:</p>
+<p id="demo3"></p>
+
+<script>
+    let ya = "John";
+    let xa = +ya;
+    document.getElementById("demo3").innerHTML = typeof ya + "<br>" + typeof xa;
+</script>
+
+
+<h2>The JavaScript String() Method</h2>
+<p>The String() method can convert a number to a string.</p>
+<p id="demo4"></p>
+
+<script>
+    let xb = 123;
+    document.getElementById("demo4").innerHTML =
+        String(xb) + "<br>" +
+        String(123) + "<br>" +
+        String(100 + 23);
+</script>
+
+
+<h2>JavaScript Number Methods</h2>
+<p>The toString() method converts a number to a string.</p>
+<p id="demo5"></p>
+
+<script>
+    let xc = 123;
+    document.getElementById("demo5").innerHTML =
+        xc.toString() + "<br>" +
+        (123).toString() + "<br>" +
+        (100 + 23).toString();
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p id="demo6"></p>
+
+<script>
+    document.getElementById("demo6").innerHTML =
+        (5 + null) + "<br>" +
+        ("5" + null) + "<br>" +
+        ("5" + 2) + "<br>" +
+        ("5" - 2) + "<br>" +
+        ("5" * "2") + "<br>" +
+        ("5" / "2") + "<br>"
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting false to other types:</p>
+<p id="demo7" style="font-family:courier"></p>
+
+<script>
+    let x1 = false;
+    document.getElementById("demo7").innerHTML =
+        "Number : " + Number(x1) + "<br>" +
+        "String : " + String(x1) + "<br>" +
+        "Boolean: " + Boolean(x1);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting true to other types:</p>
+<p id="demo8" style="font-family:courier"></p>
+
+<script>
+    let x2 = true;
+    document.getElementById("demo8").innerHTML =
+        "Number : " + Number(x2) + "<br>" +
+        "String : " + String(x2) + "<br>" +
+        "Boolean: " + Boolean(x2);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting the number 0 to other types:</p>
+<p id="demo9" style="font-family:courier"></p>
+
+<script>
+    let x3 = 0;
+    document.getElementById("demo9").innerHTML =
+        "Number : " + Number(x3) + "<br>" +
+        "String : " + String(x3) + "<br>" +
+        "Boolean: " + Boolean(x3);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting the number 1 to other types:</p>
+<p id="demo10" style="font-family:courier"></p>
+
+<script>
+    let x4 = 1;
+    document.getElementById("demo10").innerHTML =
+        "Number : " + Number(x4) + "<br>" +
+        "String : " + String(x4) + "<br>" +
+        "Boolean: " + Boolean(x4);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting the string "0" to other types:</p>
+<p id="demo11" style="font-family:courier"></p>
+
+<script>
+    let x5 = "0";
+    document.getElementById("demo11").innerHTML =
+        "Number : " + Number(x5) + "<br>" +
+        "String : " + String(x5) + "<br>" +
+        "Boolean: " + Boolean(x5);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting the string "000" to other types:</p>
+<p id="demo12" style="font-family:courier"></p>
+
+<script>
+    let x6 = "000";
+    document.getElementById("demo12").innerHTML =
+        "Number : " + Number(x6) + "<br>" +
+        "String : " + String(x6) + "<br>" +
+        "Boolean: " + Boolean(x6);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting the string "1" to other types:</p>
+<p id="demo13" style="font-family:courier"></p>
+
+<script>
+    let x7 = 1;
+    document.getElementById("demo13").innerHTML =
+        "Number : " + Number(x7) + "<br>" +
+        "String : " + String(x7) + "<br>" +
+        "Boolean: " + Boolean(x7);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting NaN to other types:</p>
+<p id="demo14" style="font-family:courier"></p>
+
+<script>
+    let x8 = NaN;
+    document.getElementById("demo14").innerHTML =
+        "Number : " + Number(x8) + "<br>" +
+        "String : " + String(x8) + "<br>" +
+        "Boolean: " + Boolean(x8);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting Infinity to other types:</p>
+<p id="demo15" style="font-family:courier"></p>
+
+<script>
+    let x9 = Infinity;
+    document.getElementById("demo15").innerHTML =
+        "Number : " + Number(x9) + "<br>" +
+        "String : " + String(x9) + "<br>" +
+        "Boolean: " + Boolean(x9);
+</script>
+
+
+<h2>JavaScript Type Conversions</h2>
+<p>Converting -Infinity to other types:</p>
+<p id="demo16" style="font-family:courier"></p>
+
+<script>
+    let x10 = -Infinity;
+    document.getElementById("demo16").innerHTML =
+        "Number : " + Number(x10) + "<br>" +
+        "String : " + String(x10) + "<br>" +
+        "Boolean: " + Boolean(x10);
+</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Numbers</h1>
+<h2>Integer Precision</h2>
+<p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits:</p>
+<p id="demo1"></p>
+
+<script>
+    let x = 999999999999999;
+    let y = 9999999999999999;
+    document.getElementById("demo1").innerHTML = x + "<br>" + y;
+</script>
+
+
+<h1>JavaScript Numbers</h1>
+<h2>Integer and BigInt</h2>
+<p id="demo2"></p>
+
+<script>
+    let xa = 9999999999999999;
+    let ya = BigInt("9999999999999999");
+    document.getElementById("demo2").innerHTML = xa + "<br>" + ya;
+</script>
+
+
+<h1>JavaScript Numbers</h1>
+<h2>Create a BigInt</h2>
+<p id="demo3"></p>
+
+<script>
+    let xb = 123456789012345678901234567890n;
+    let yb = BigInt("123456789012345678901234567890");
+    document.getElementById("demo3").innerHTML = xb + "<br>" + yb;
+</script>
+
+
+<h1>JavaScript Numbers</h1>
+<h2>BigInt typeof</h2>
+<p>The typeof a BigInt is:</p>
+<p id="demo4"></p>
+
+<script>
+    let xc = BigInt("9999999999999999");
+    document.getElementById("demo4").innerHTML = typeof xc;
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The matchAll() Method</h2>
+<p>ES2020 intoduced the string method matchAll().</p>
+<p id="demo5"></p>
+
+<script>
+    let text = "I love cats. Cats are very easy to love. Cats are very popular."
+    const iterator = text.matchAll("Cats");
+
+    document.getElementById("demo5").innerHTML = Array.from(iterator);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The matchAll() Method</h2>
+<p>ES2020 intoduced the string method matchAll().</p>
+<p id="demo6"></p>
+
+<script>
+    let text1 = "I love cats. Cats are very easy to love. Cats are very popular."
+    const iterator1 = text1.matchAll(/Cats/g);
+
+    document.getElementById("demo6").innerHTML = Array.from(iterator1);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The matchAll() Method</h2>
+<p>ES2020 intoduced the string method matchAll().</p>
+<p id="demo7"></p>
+
+<script>
+    let text2 = "I love cats. Cats are very easy to love. Cats are very popular."
+    const iterator2 = text2.matchAll(/Cats/gi);
+
+    document.getElementById("demo7").innerHTML = Array.from(iterator2);
+</script>
+
+
+<h1>JavaScript Operators</h1>
+<h2>The ?? Operator</h2>
+<p>The ?? operator returns the first argument if it is not nullish (null or undefined). Otherwise it returns the
+    second.</p>
+<p id="demo8"></p>
+
+<script>
+    let name = null;
+    let text3 = "missing";
+    let result = name ?? text3;
+    document.getElementById("demo8").innerHTML = "The name is " + result;
+</script>
+
+
+<h1>JavaScript Operators</h1>
+<h2>The ?. Operator</h2>
+<p>The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).</p>
+<p>Car name is:</p>
+<p id="demo9"></p>
+
+<script>
+    const car = {type: "Fiat", model: "500", color: "white"};
+    let name1 = car?.name1;
+    document.getElementById("demo9").innerHTML = name1;
+</script>
+
+
+<h1>JavaScript Assignments</h1>
+<h2>Logical AND Assignment</h2>
+<h3>The &&= Operator</h3>
+<p>If the first value is true, the second value is assigned.</p>
+<p id="demo10"></p>
+
+<script>
+    let xd = 100;
+    xd &&= 5;
+    document.getElementById("demo10").innerHTML = "Value of x is: " + xd;
+</script>
+
+
+<h1>JavaScript Assignments</h1>
+<h2>Logical OR Assignment</h2>
+<h3>The ||= Operator</h3>
+<p>If the first value is false, the second value is assigned:</p>
+<p id="demo11"></p>
+
+<script>
+    let xe = undefined;
+    xe ||= 5;
+    document.getElementById("demo11").innerHTML = "Value of x is: " + xe;
+</script>
+
+
+<h1>JavaScript Assignments</h1>
+<h2>Nullish coalescing assignment</h2>
+<h3>The ??= Operator</h3>
+<p id="demo12"></p>
+
+<script>
+    let xf = 100;
+    xf ??= 5;
+    document.getElementById("demo12").innerHTML = "Value of x is: " + xf;
+</script>
+</body>
+</html>

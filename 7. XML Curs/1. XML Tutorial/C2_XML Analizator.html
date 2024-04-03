@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- FUNCTIONEAZA DOAR CU LIVE SERVER !!!
+
+  http://localhost:5500/C2_XML Analizator.html
+  http://127.0.0.1:5500/C2_XML Analizator.html
+-->
+
+
+<p id="demo1"></p>
+
+<script>
+    var parser, xmlDoc;
+    var text = "<bookstore><book>" +
+        "<title>Everyday Italian</title>" +
+        "<author>Giada De Laurentiis</author>" +
+        "<year>2005</year>" +
+        "</book></bookstore>";
+
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(text, "text/xml");
+
+    document.getElementById("demo1").innerHTML =
+        xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+</script>
+
+
+<h2>My CD Collection:</h2>
+<button type="button" onclick="loadXMLDoc()">
+    Get my CD collection
+</button>
+
+<p id="demo2"></p>
+
+<script>
+    function loadXMLDoc() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+        };
+        xmlhttp.open("GET", "EX9_cd_catalog.xml", true);
+        xmlhttp.send();
+    }
+
+    function myFunction(xml) {
+        var x, i, xmlDoc, txt;
+        xmlDoc = xml.responseXML;
+        txt = "";
+        x = xmlDoc.getElementsByTagName("ARTIST");
+        for (i = 0; i < x.length; i++) {
+            txt += x[i].childNodes[0].nodeValue + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = txt;
+    }
+</script>
+</body>
+</html>

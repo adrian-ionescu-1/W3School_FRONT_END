@@ -1,0 +1,14 @@
+{
+  "name": "c4_sass-mixin-si-includ",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "sass mystyle.scss mystyle.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.0"
+  }
+}

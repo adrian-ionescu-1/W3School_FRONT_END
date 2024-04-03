@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The indexOf() Method</h2>
+<p>The position of the first occurrence of "locate" is:</p>
+<p id="demo1"></p>
+
+<script>
+    let text = "Please locate where 'locate' occurs!";
+    document.getElementById("demo1").innerHTML = text.indexOf("locate");
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The lastIndexOf() Method</h2>
+<p>Return the position of the last occurrence of a specified text:</p>
+<p id="demo2"></p>
+
+<script>
+    let text2 = "Please locate where 'locate' occurs!";
+    document.getElementById("demo2").innerHTML = text2.lastIndexOf("locate");
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The indexOf() Method</h2>
+<p>Both indexOf() and lastIndexOf() return -1 if the text is not found:</p>
+<p id="demo3"></p>
+
+<script>
+    let text3 = "Please locate where 'locate' occurs!";
+    document.getElementById("demo3").innerHTML = text3.indexOf("John");
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The indexOf() Method</h2>
+<p>The indexOf() method accepts a second parameter as the starting position for the search:</p>
+<p id="demo4"></p>
+
+<script>
+    let text4 = "Please locate where 'locate' occurs!";
+    document.getElementById("demo4").innerHTML = text4.indexOf("locate", 15);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The lastIndexOf() Method</h2>
+<p>The lastIndexOf() method accepts a second parameter as the starting position for the search.</p>
+<p>Remember that the lastIndexOf() method searches backwards, so position 15 means start the search at position 15, and
+    search to the beginning.</p>
+<p id="demo5"></p>
+
+<script>
+    let text5 = "Please locate where 'locate' occurs!";
+    document.getElementById("demo5").innerHTML = text5.lastIndexOf("locate", 15);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The search() Method</h2>
+<p>Return the position of the first occurrence of a string in a string:</p>
+<p id="demo6"></p>
+
+<script>
+    let text6 = "Please locate where 'locate' occurs!";
+    document.getElementById("demo6").innerHTML = text6.search("locate");
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The search() Method</h2>
+<p>Return the position of the first occurrence of a regular expression:</p>
+<p id="demo7"></p>
+
+<script>
+    let text7 = "Please locate where 'locate' occurs!";
+    document.getElementById("demo7").innerHTML = text7.search(/locate/);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The match() Method</h2>
+<p>Perform a search for "ain":</p>
+<p id="demo8"></p>
+
+<script>
+    let text8 = "The rain in SPAIN stays mainly in the plain";
+    const myArr = text8.match("ain");
+    document.getElementById("demo8").innerHTML = myArr.length + " " + myArr;
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The match() Method</h2>
+<p>Perform a search for "ain":</p>
+<p id="demo9"></p>
+
+<script>
+    let text9 = "The rain in SPAIN stays mainly in the plain";
+    const myArr2 = text9.match(/ain/);
+    document.getElementById("demo9").innerHTML = myArr2.length + " " + myArr2;
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The match() Method</h2>
+<p>Perform a global search for "ain":</p>
+<p id="demo10"></p>
+
+<script>
+    let text10 = "The rain in SPAIN stays mainly in the plain";
+    const myArr3 = text10.match(/ain/g);
+    document.getElementById("demo10").innerHTML = myArr3.length + " " + myArr3;
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The match() Method</h2>
+<p>Perform a global, case-insensitive search for "ain":</p>
+<p id="demo11"></p>
+
+<script>
+    let text11 = "The rain in SPAIN stays mainly in the plain";
+    const myArr4 = text11.match(/ain/gi);
+    document.getElementById("demo11").innerHTML = myArr4.length + " " + myArr4;
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The matchAll() Method</h2>
+<p>ES2020 intoduced the string method matchAll().</p>
+<p id="demo12"></p>
+
+<script>
+    let text12 = "I love cats. Cats are very easy to love. Cats are very popular."
+    const iterator = text12.matchAll("Cats");
+
+    document.getElementById("demo12").innerHTML = Array.from(iterator);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The matchAll() Method</h2>
+<p>ES2020 intoduced the string method matchAll().</p>
+<p id="demo13"></p>
+
+<script>
+    let text13 = "I love cats. Cats are very easy to love. Cats are very popular."
+    const iterator2 = text13.matchAll(/Cats/g);
+
+    document.getElementById("demo13").innerHTML = Array.from(iterator2);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The matchAll() Method</h2>
+<p>ES2020 intoduced the string method matchAll().</p>
+<p id="demo14"></p>
+
+<script>
+    let text14 = "I love cats. Cats are very easy to love. Cats are very popular."
+    const iterator3 = text14.matchAll(/Cats/gi);
+
+    document.getElementById("demo14").innerHTML = Array.from(iterator3);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The includes() Method</h2>
+<p>Check if a string includes "world":</p>
+<p id="demo15"></p>
+<p>The includes() method is not supported in Internet Explorer.</p>
+
+<script>
+    let text15 = "Hello world, welcome to the universe.";
+    document.getElementById("demo15").innerHTML = text15.includes("world");
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The includes() Method</h2>
+<p>Check if a string includes "world" starting from position 12:</p>
+<p id="demo16"></p>
+<p>The includes() method is not supported in Internet Explorer.</p>
+
+<script>
+    let text16 = "Hello world, welcome to the universe.";
+    document.getElementById("demo16").innerHTML = text16.includes("world", 12);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The startsWith() Method</h2>
+<p>Check if a string starts with "Hello":</p>
+<p id="demo17"></p>
+<p>The startsWith() method is not supported in Internet Explorer.</p>
+
+<script>
+    let text17 = "Hello world, welcome to the universe.";
+    document.getElementById("demo17").innerHTML = text17.startsWith("Hello");
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The startsWith() Method</h2>
+<p id="demo18"></p>
+<p>The startsWith() method is not supported in Internet Explorer.</p>
+
+<script>
+    let text18 = "Hello world, welcome to the universe.";
+    document.getElementById("demo18").innerHTML = text18.startsWith("world");
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The startsWith() Method</h2>
+<p id="demo19"></p>
+<p>The startsWith() method is not supported in Internet Explorer.</p>
+
+<script>
+    let text19 = "Hello world, welcome to the universe.";
+    document.getElementById("demo19").innerHTML = text19.startsWith("world", 5);
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The startsWith() Method</h2>
+<p id="demo20"></p>
+<p>The startsWith() method is not supported in Internet Explorer.</p>
+
+<script>
+    let text20 = "Hello world, welcome to the universe.";
+    document.getElementById("demo20").innerHTML = text20.startsWith("world", 6);
+</script>
+
+
+<h2>JavaScript Strings</h2>
+<p>Check if a string ends with "Doe":</p>
+<p id="demo21"></p>
+<p>The endsWith() method is not supported in Internet Explorer.</p>
+
+<script>
+    let text21 = "John Doe";
+    document.getElementById("demo21").innerHTML = text21.endsWith("Doe");
+</script>
+
+
+<h2>JavaScript Strings</h2>
+<p>Check in the 11 first characters of a string ends with "world":</p>
+<p id="demo22"></p>
+<p>The endsWith() method is not supported in Internet Explorer.</p>
+
+<script>
+    let text22 = "Hello world, welcome to the universe.";
+    document.getElementById("demo22").innerHTML = text22.endsWith("world", 11);
+</script>
+</body>
+</html>

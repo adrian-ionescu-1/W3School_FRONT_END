@@ -1,0 +1,17 @@
+1. Link: https://nodejs.org/en/
+2. Deschide VS CODE si creezi proiect.
+3. Deschide TERMINAL in proiect:
+npm init >>ENTER (package.json)
+npm -v
+npm install -sass
+4. Adauga package.json in dosar principal
+5. Scrie in TERMINAL:
+cd "SASS Tutorial" ("nume dosar")
+
+
+"scripts": {
+    "compile-sass": "sass mystyle.scss mystyle.css"
+  },
+
+
+npm run compile-sass

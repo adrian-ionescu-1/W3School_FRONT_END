@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<body onload="startTime()">
+
+<h2>JavaScript Timing</h2>
+<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+
+<button onclick="setTimeout(myFunction, 3000);">Try it</button>
+
+<script>
+    function myFunction() {
+        alert('Hello');
+    }
+</script>
+
+
+<h2>JavaScript Timing</h2>
+<p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+<p>Click "Stop" to prevent the first function to execute.</p>
+<p>(You must click "Stop" before the 3 seconds are up.)</p>
+
+<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+
+<button onclick="clearTimeout(myVar)">Stop it</button>
+
+<script>
+    function myFunction() {
+        alert("Hello");
+    }
+</script>
+
+
+<h2>JavaScript Timing</h2>
+<p>A script on this page starts this clock:</p>
+<p id="demo1"></p>
+
+<script>
+    setInterval(myTimer, 1000);
+
+    function myTimer() {
+        const d = new Date();
+        document.getElementById("demo1").innerHTML = d.toLocaleTimeString();
+    }
+</script>
+
+
+<h2>JavaScript Timing</h2>
+<p>A script on this page starts this clock:</p>
+<p id="demo2"></p>
+
+<button onclick="clearInterval(myVar)">Stop time</button>
+
+<script>
+    let myVar = setInterval(myTimer, 1000);
+
+    function myTimer() {
+        const d = new Date();
+        document.getElementById("demo2").innerHTML = d.toLocaleTimeString();
+    }
+</script>
+
+
+<h2>JavaSript setTimeout()</h2>
+<p id="demo3">I will display when two, four, and six seconds have passed.</p>
+
+<script>
+    setTimeout(myTimeout1, 2000)
+    setTimeout(myTimeout2, 4000)
+    setTimeout(myTimeout3, 6000)
+
+    function myTimeout1() {
+        document.getElementById("demo3").innerHTML = "2 seconds";
+    }
+
+    function myTimeout2() {
+        document.getElementById("demo3").innerHTML = "4 seconds";
+    }
+
+    function myTimeout3() {
+        document.getElementById("demo3").innerHTML = "6 seconds";
+    }
+</script>
+
+
+<h2>JavaScript Clock</h2>
+<div id="txt"></div>
+
+<script>
+    function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        ;  // add zero in front of numbers < 10
+        return i;
+    }
+</script>
+
+</body>
+</html>

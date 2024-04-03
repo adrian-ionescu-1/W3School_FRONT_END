@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Numbers</h1>
+<h2>Integer Precision</h2>
+<p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits:</p>
+<p id="demo1"></p>
+
+<script>
+    let x = 999999999999999;
+    let y = 9999999999999999;
+    document.getElementById("demo1").innerHTML = x + "<br>" + y;
+</script>
+
+
+<h1>JavaScript Numbers</h1>
+<h2>Integer and BigInt</h2>
+<p id="demo2"></p>
+
+<script>
+    let xa = 9999999999999999;
+    let ya = BigInt("9999999999999999");
+    document.getElementById("demo2").innerHTML = xa + "<br>" + ya;
+</script>
+
+
+<h1>JavaScript Numbers</h1>
+<h2>Create a BigInt</h2>
+<p id="demo3"></p>
+
+<script>
+    let xb = 123456789012345678901234567890n;
+    let yb = BigInt("123456789012345678901234567890");
+    document.getElementById("demo3").innerHTML = xb + "<br>" + yb;
+</script>
+
+
+<h1>JavaScript Numbers</h1>
+<h2>BigInt typeof</h2>
+<p>The typeof a BigInt is:</p>
+<p id="demo4"></p>
+
+<script>
+    let xc = BigInt("9999999999999999");
+    document.getElementById("demo4").innerHTML = typeof xc;
+</script>
+
+
+<h1>JavScript Bigint</h1>
+<h2>BigInt Multiply</h2>
+<p>Operators that can be used a Number can be used on a BigInt.</p>
+<p id="demo5"></p>
+
+<script>
+    let xd = 9007199254740995n;
+    let yd = 9007199254740995n;
+    let zd = xd * yd;
+
+    document.getElementById("demo5").innerHTML = zd;
+</script>
+
+
+<h1>JavScript Bigint</h1>
+<h2>BigInt Divide</h2>
+<p>A BigInt can not have decimals.</p>
+<p>Cannot mix BigInt and other types, use explicit conversions.</p>
+<p id="demo6"></p>
+
+<script>
+    let xe = 5n;
+    let ye = Number(xe) / 2;
+
+    document.getElementById("demo6").innerHTML = ye;
+</script>
+
+
+<h1>JavScript Bigint</h1>
+<h2>Hex, Octal and Binary</h2>
+<p id="demo7"></p>
+
+<script>
+    let hex = 0x20000000000003n;
+    let oct = 0o400000000000000003n;
+    let bin = 0b100000000000000000000000000000000000000000000000000011n;
+
+    document.getElementById("demo7").innerHTML = hex + "<br>" + oct + "<br>" + bin;
+</script>
+
+
+<h1>JavScript Numbers</h1>
+<h2>Integer Precision</h2>
+<p>Is 9007199254740992 equal to 9007199254740993?</p>
+<p id="demo8"></p>
+
+<script>
+    let xf = 9007199254740992 === 9007199254740993;
+    document.getElementById("demo8").innerHTML = xf;
+</script>
+
+
+<h2>Number Object Properties</h2>
+<p>MAX_SAFE_INTEGER</p>
+<p id="demo9"></p>
+
+<script>
+    let xg = Number.MAX_SAFE_INTEGER;
+    document.getElementById("demo9").innerHTML = xg;
+</script>
+
+
+<h2>Number Object Properties</h2>
+<p>MIN_SAFE_INTEGER</p>
+<p id="demo10"></p>
+
+<script>
+    let xh = Number.MIN_SAFE_INTEGER;
+    document.getElementById("demo10").innerHTML = xh;
+</script>
+
+
+<h1>JavaScript Numbers</h1>
+<h2>The isInteger() Method</h2>
+<p>The isInteger() method returns true if the argument is an integer.</p>
+<p>Otherwise it returns false.</p>
+<p id="demo11"></p>
+
+<script>
+    document.getElementById("demo11").innerHTML =
+        Number.isInteger(10) + "<br>" + Number.isInteger(10.5);
+</script>
+
+
+<h1>JavaScript Numbers</h1>
+<h2>The isSafeInteger() Method</h2>
+<p>The isSafeInteger() method returns true if the argument is a safe integer.</p>
+<p>Otherwise it returns false.</p>
+<p id="demo12"></p>
+
+<script>
+    document.getElementById("demo12").innerHTML =
+        Number.isSafeInteger(10) + "<br>" + Number.isSafeInteger(12345678901234567890);
+</script>
+</body>
+</html>

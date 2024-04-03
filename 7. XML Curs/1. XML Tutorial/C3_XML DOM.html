@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="demo1">This is a Heading</h1>
+<button type="button"
+        onclick="document.getElementById('demo1').innerHTML = 'Hello World!'">Click Me!
+</button>
+
+
+<p id="demo2"></p>
+<script>
+    var parser, xmlDoc;
+    var text = "<bookstore><book>" +
+        "<title>Everyday Italian</title>" +
+        "<author>Giada De Laurentiis</author>" +
+        "<year>2005</year>" +
+        "</book></bookstore>";
+
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(text, "text/xml");
+
+    document.getElementById("demo2").innerHTML =
+        xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+</script>
+</body>
+</html>

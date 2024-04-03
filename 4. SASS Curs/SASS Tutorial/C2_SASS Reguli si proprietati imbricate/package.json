@@ -1,0 +1,14 @@
+{
+  "name": "c2_sass-reguli-si-proprietati-imbricate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "sass mystyle.scss mystyle.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.0"
+  }
+}

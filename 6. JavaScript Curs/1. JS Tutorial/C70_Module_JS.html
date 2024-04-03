@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        PT A ACCESA PAGINA UTILIZEAZA LINK SERVER:
+        1.  http://localhost:5500/C70_Module_JS.html
+        2.  http://127.0.0.1:5500/C70_Module_JS.html
+    -->
+</head>
+<body>
+<h1>JavaScript Modules</h1>
+<p id="demo1"></p>
+
+<script type="module">
+    import message from "./message.js";
+
+    document.getElementById("demo1").innerHTML = message();
+</script>
+
+
+<h1>JavaScript Modules</h1>
+<p id="demo2"></p>
+
+<script type="module">
+    import {name, age} from "./person.js";
+
+    let text = "My name is " + name + ", I am " + age + ".";
+
+    document.getElementById("demo2").innerHTML = text;
+</script>
+
+
+<h1>JavaScript Modules</h1>
+<p id="demo3"></p>
+
+<script type="module">
+    import message from "./message.js";
+
+    document.getElementById("demo3").innerHTML = message();
+
+</script>
+</body>
+</html>

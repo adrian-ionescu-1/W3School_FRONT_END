@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+<div id="div1">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+    const para = document.createElement("p");
+    const node = document.createTextNode("This is new.");
+    para.appendChild(node);
+    const element = document.getElementById("div1");
+    element.appendChild(para);
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Add a new HTML Element.</p>
+<div id="div2">
+    <p id="p1a">This is a paragraph.</p>
+    <p id="p2a">This is another paragraph.</p>
+</div>
+
+<script>
+    const paraA = document.createElement("p");
+    const nodeA = document.createTextNode("This is new.");
+    paraA.appendChild(nodeA);
+
+    const elementA = document.getElementById("div2");
+    const child = document.getElementById("p1a");
+    elementA.insertBefore(paraA, child);
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<h3>Remove an HTML Element.</h3>
+<div>
+    <p id="p1b">This is a paragraph.</p>
+    <p id="p2b">This is another paragraph.</p>
+</div>
+
+<button onclick="myFunction()">Remove Element</button>
+
+<script>
+    function myFunction() {
+        document.getElementById("p1b").remove();
+    }
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Remove Child Element</p>
+
+<div id="div3">
+    <p id="p1c">This is a paragraph.</p>
+    <p id="p2c">This is another paragraph.</p>
+</div>
+
+<script>
+    const parent = document.getElementById("div3");
+    const childB = document.getElementById("p1c");
+    parent.removeChild(childB);
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<h3>Replace an HTML Element.</h3>
+<div id="div4">
+    <p id="p1d">This is a paragraph.</p>
+    <p id="p2d">This is a paragraph.</p>
+</div>
+
+<script>
+    const parentC = document.getElementById("div4");
+    const childC = document.getElementById("p1d");
+    const paraC = document.createElement("pd");
+    const nodeC = document.createTextNode("This is new.");
+    paraC.appendChild(nodeC);
+    parentC.replaceChild(paraC, childC);
+</script>
+</body>
+</html>

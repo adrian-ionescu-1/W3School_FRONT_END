@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Sets</h2>
+<p>Create a Set from an Array:</p>
+<p id="demo1"></p>
+
+<script>
+    // Create a Set
+    const letters = new Set(["a", "b", "c"]);
+
+    // Display set.size
+    document.getElementById("demo1").innerHTML = letters.size;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>Add values to a Set:</p>
+<p id="demo2"></p>
+
+<script>
+    // Create a Set
+    const letters2 = new Set();
+
+    // Add Values to the Set
+    letters2.add("a");
+    letters2.add("b");
+    letters2.add("c");
+
+    // Display set.size
+    document.getElementById("demo2").innerHTML = letters2.size;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>Add variables to a Set:</p>
+<p id="demo3"></p>
+
+<script>
+    // Create a Set
+    const letters3 = new Set();
+
+    // Create Variables
+    const a = "a";
+    const b = "b";
+    const c = "c";
+
+    // Add the Variables to the Set
+    letters3.add(a);
+    letters3.add(b);
+    letters3.add(c);
+
+    // Display set.size
+    document.getElementById("demo3").innerHTML = letters3.size;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>Adding new elements to a Set:</p>
+<p id="demo4"></p>
+
+<script>
+    // Create a new Set
+    const letters4 = new Set(["a", "b", "c"]);
+
+    // Add a new Element
+    letters4.add("d");
+    letters4.add("e");
+
+    // Display set.size
+    document.getElementById("demo4").innerHTML = letters4.size;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>Adding equal elements to a Set:</p>
+<p id="demo5"></p>
+
+<script>
+    // Create a Set
+    const letters5 = new Set();
+
+    // Add values to the Set
+    letters5.add("a");
+    letters5.add("b");
+    letters5.add("c");
+    letters5.add("c");
+    letters5.add("c");
+    letters5.add("c");
+    letters5.add("c");
+    letters5.add("c");
+
+    // Display set.size
+    document.getElementById("demo5").innerHTML = letters5.size;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>forEach() calls a function for each element:</p>
+<p id="demo6"></p>
+
+<script>
+    // Create a Set
+    const letters6 = new Set(["a", "b", "c"]);
+
+    // List all Elements
+    let text = "";
+    letters6.forEach(function (value) {
+        text += value + "<br>";
+    })
+
+    document.getElementById("demo6").innerHTML = text;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>Set.values() returns a Set Iterator:</p>
+<p id="demo7"></p>
+
+<script>
+    // Create a Set
+    const letters7 = new Set(["a", "b", "c"]);
+
+    // Display set.size
+    document.getElementById("demo7").innerHTML = letters7.values();
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>Iterating Set values:</p>
+<p id="demo8"></p>
+
+<script>
+    // Create a Set
+    const letters8 = new Set(["a", "b", "c"]);
+
+    // List all Elements
+    let text8 = "";
+    for (const x of letters8.values()) {
+        text8 += x + "<br>";
+    }
+
+    document.getElementById("demo8").innerHTML = text8;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>Set.keys() returns a Set Iterator:</p>
+<p id="demo9"></p>
+
+<script>
+    // Create a Set
+    const letters9 = new Set(["a", "b", "c"]);
+
+    // Display set.size
+    document.getElementById("demo9").innerHTML = letters9.keys();
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>entries() Returns an Iterator with [value,value] pairs from a Set:</p>
+<p id="demo10"></p>
+
+<script>
+    // Create a Set
+    const letters10 = new Set(["a", "b", "c"]);
+
+    // List all entries
+    const iterator = letters10.entries();
+    let text10 = "";
+    for (const entry of iterator) {
+        text10 += entry + "<br>";
+    }
+
+    document.getElementById("demo10").innerHTML = text10;
+</script>
+
+
+<h2>JavaScript Sets Objects</h2>
+<p>The typeof operator returns object:</p>
+<p id="demo11"></p>
+
+<script>
+    // Create a new Set
+    const letters11 = new Set(["a", "b", "c"]);
+
+    // Display typeof
+    document.getElementById("demo11").innerHTML = typeof letters11;
+</script>
+
+
+<h2>JavaScript Sets</h2>
+<p>The instanceof operator returns true:</p>
+<p id="demo12"></p>
+
+<script>
+    // Create a new Set
+    const letters12 = new Set(["a", "b", "c"]);
+
+    // Display typeof
+    document.getElementById("demo12").innerHTML = letters12 instanceof Set;
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+<p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" min="100" max="300" required>
+<button onclick="myFunctionA()">OK</button>
+
+<p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+<p id="demo1"></p>
+
+<script>
+    function myFunctionA() {
+        const inpObj = document.getElementById("id1");
+        if (!inpObj.checkValidity()) {
+            document.getElementById("demo1").innerHTML = inpObj.validationMessage;
+        } else {
+            document.getElementById("demo1").innerHTML = "Input OK";
+        }
+    }
+</script>
+
+
+<h2>JavaScript Validation</h2>
+<p>Enter a number and click OK:</p>
+<input id="id2" type="number" max="100">
+<button onclick="myFunctionB()">OK</button>
+<p>If the number is greater than 100 (the input's max attribute), an error message will be displayed.</p>
+<p id="demo2"></p>
+
+<script>
+    function myFunctionB() {
+        let text;
+        if (document.getElementById("id2").validity.rangeOverflow) {
+            text = "Value too large";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("demo2").innerHTML = text;
+    }
+</script>
+
+
+<h2>JavaScript Validation</h2>
+<p>Enter a number and click OK:</p>
+<input id="id3" type="number" min="100">
+<button onclick="myFunctionC()">OK</button>
+<p>If the number is less than 100 (the input's min attribute), an error message will be displayed.</p>
+<p id="demo3"></p>
+
+<script>
+    function myFunctionC() {
+        let text;
+        if (document.getElementById("id3").validity.rangeUnderflow) {
+            text = "Value too small";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("demo3").innerHTML = text;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Booleans</h2>
+<p>Display the value of Boolean(10 > 9):</p>
+<p id="demo1"></p>
+
+<script>
+    document.getElementById("demo1").innerHTML = Boolean(10 > 9);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Display the value of 10 > 9:</p>
+<p id="demo2"></p>
+
+<script>
+    document.getElementById("demo2").innerHTML = 10 > 9;
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p id="demo3"></p>
+
+<script>
+    document.getElementById("demo3").innerHTML =
+        "100 is " + Boolean(100) + "<br>" +
+        "3.14 is " + Boolean(3.14) + "<br>" +
+        "-15 is " + Boolean(-15) + "<br>" +
+        "Any (not empty) string is " + Boolean("Hello") + "<br>" +
+        "Even the string 'false' is " + Boolean('false') + "<br>" +
+        "Any expression (except zero) is " + Boolean(1 + 7 + 3.14);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Display the Boolean value of 0:</p>
+<p id="demo4"></p>
+
+<script>
+    let x = 0;
+    document.getElementById("demo4").innerHTML = Boolean(x);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Display the Boolean value of -0:</p>
+<p id="demo5"></p>
+
+<script>
+    let xy = -0;
+    document.getElementById("demo5").innerHTML = Boolean(xy);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Display the Boolean value of "":</p>
+<p id="demo6"></p>
+
+<script>
+    let xz = "";
+    document.getElementById("demo6").innerHTML = Boolean("");
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Display the Boolean value of undefined:</p>
+<p id="demo7"></p>
+
+<script>
+    let xx;
+    document.getElementById("demo7").innerHTML = Boolean(xx);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Display the Boolean value of null:</p>
+<p id="demo8"></p>
+
+<script>
+    let xa = null;
+    document.getElementById("demo8").innerHTML = Boolean(xa);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Display the Boolean value of false:</p>
+<p id="demo9"></p>
+
+<script>
+    let xb = false;
+    document.getElementById("demo9").innerHTML = Boolean(xb);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Display the Boolean value of NaN:</p>
+<p id="demo10"></p>
+
+<script>
+    let xc = 10 / "Hello";
+    document.getElementById("demo10").innerHTML = Boolean(xc);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Booleans and Boolean objects cannot be safely compared:</p>
+<p id="demo11"></p>
+
+<script>
+    // x is a boolean
+    let xd = false;
+
+    // y is an object
+    let y = new Boolean(false);
+
+    document.getElementById("demo11").innerHTML = typeof xd + "<br>" + typeof y;
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Booleans and Boolean objects cannot be safely compared:</p>
+<p id="demo12"></p>
+
+<script>
+    let xe = false;         // x is a boolean
+    let ya = new Boolean(false);  // y is an object
+    document.getElementById("demo12").innerHTML = (xe == ya);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Booleans and Boolean objects cannot be safely compared:</p>
+<p id="demo13"></p>
+
+<script>
+    let xf = false;         // x is a Boolean
+    let yb = new Boolean(false);  // y is an object
+    document.getElementById("demo13").innerHTML = (xf === yb);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Booleans and Boolean objects cannot be safely compared.</p>
+<p id="demo14"></p>
+
+<script>
+    const xg = new Boolean(false);
+    const yc = new Boolean(false);
+    document.getElementById("demo14").innerHTML = (xg == yc);
+</script>
+
+
+<h2>JavaScript Booleans</h2>
+<p>Booleans and Boolean objects cannot be safely compared.</p>
+<p id="demo15"></p>
+
+<script>
+    const xh = new Boolean(false);
+    const yd = new Boolean(false);
+    document.getElementById("demo15").innerHTML = (xh === yd);
+</script>
+</body>
+</html>

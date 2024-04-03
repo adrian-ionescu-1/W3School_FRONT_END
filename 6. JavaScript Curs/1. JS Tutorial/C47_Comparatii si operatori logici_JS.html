@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Comparison</h1>
+<h2>The == Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x == 8):</p>
+<p id="demo1"></p>
+
+<script>
+    let x = 5;
+    document.getElementById("demo1").innerHTML = (x == 8);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The == Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x == 5):</p>
+<p id="demo2"></p>
+
+<script>
+    let xa = 5;
+    document.getElementById("demo2").innerHTML = (xa == 5);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The == Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x == 5):</p>
+<p id="demo3"></p>
+
+<script>
+    let xb = 5;
+    document.getElementById("demo3").innerHTML = (xb == "5");
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The === Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x === 5):</p>
+<p id="demo4"></p>
+
+<script>
+    let xc = 5;
+    document.getElementById("demo4").innerHTML = (xc === 5);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The === Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x === "5").</p>
+<p id="demo5"></p>
+
+<script>
+    let xd = 5;
+    document.getElementById("demo5").innerHTML = (xd === "5");
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The != Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x != 8).</p>
+<p id="demo6"></p>
+
+<script>
+    let xe = 5;
+    document.getElementById("demo6").innerHTML = (xe != 8);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The !== Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x !== 5):</p>
+<p id="demo7"></p>
+
+<script>
+    let xf = 5;
+    document.getElementById("demo7").innerHTML = (xf !== 5);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The !== Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x !== "5"):</p>
+<p id="demo8"></p>
+
+<script>
+    let xg = 5;
+    document.getElementById("demo8").innerHTML = (xg !== "5");
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The !== Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x !== 8):</p>
+<p id="demo9"></p>
+
+<script>
+    let xh = 5;
+    document.getElementById("demo9").innerHTML = (xh !== 8);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The > Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x > 8).</p>
+<p id="demo10"></p>
+
+<script>
+    let xj = 5;
+    document.getElementById("demo10").innerHTML = (xj > 8);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The < Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x < 8).</p>
+<p id="demo11"></p>
+
+<script>
+    let xk = 5;
+    document.getElementById("demo11").innerHTML = (xk < 8);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The >= Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x >= 8).</p>
+<p id="demo12"></p>
+
+<script>
+    let xl = 5;
+    document.getElementById("demo12").innerHTML = (xl >= 8);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The <= Operator</h2>
+<p>Assign 5 to x, and display the value of the comparison (x <= 8).</p>
+<p id="demo13"></p>
+
+<script>
+    let xm = 5;
+    document.getElementById("demo13").innerHTML = (xm <= 8);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The && Operator (Logical AND)</h2>
+<p>The && operator returns true if both expressions are true, otherwise it returns false.</p>
+<p id="demo14"></p>
+
+<script>
+    let xn = 6;
+    let y = 3;
+
+    document.getElementById("demo14").innerHTML =
+        (xn < 10 && y > 1) + "<br>" +
+        (xn < 10 && y < 1);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The || Operator (Logical OR)</h2>
+<p>The || returns true if one or both expressions are true, otherwise it returns false.</p>
+<p id="demo15"></p>
+
+<script>
+    let xo = 6;
+    let ya = 3;
+
+    document.getElementById("demo15").innerHTML =
+        (xo == 5 || ya == 5) + "<br>" +
+        (xo == 6 || ya == 0) + "<br>" +
+        (xo == 0 || ya == 3) + "<br>" +
+        (xo == 6 || ya == 3);
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p>The NOT operator (!) returns true for false statements and false for true statements.</p>
+<p id="demo16"></p>
+
+<script>
+    let xp = 6;
+    let yb = 3;
+
+    document.getElementById("demo16").innerHTML =
+        !(xp === y) + "<br>" +
+        !(xp > yb);
+</script>
+
+
+<h1>JavaScript Comparison</h1>
+<h2>The () ? : Ternary Operator</h2>
+<p>Input your age and click the button:</p>
+<input id="age" value="18"/>
+<button onclick="myFunction()">Try it</button>
+<p id="demo17"></p>
+
+<script>
+    function myFunction() {
+        let age = document.getElementById("age").value;
+        let voteable = (age < 18) ? "Too young" : "Old enough";
+        document.getElementById("demo17").innerHTML = voteable + " to vote.";
+    }
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p id="demo18"></p>
+
+<script>
+    document.getElementById("demo18").innerHTML = 2 < 12;
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p id="demo19"></p>
+
+<script>
+    document.getElementById("demo19").innerHTML = 2 < "12";
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p id="demo20"></p>
+
+<script>
+    document.getElementById("demo20").innerHTML = 2 < "John";
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p id="demo21"></p>
+
+<script>
+    document.getElementById("demo21").innerHTML = 2 > "John";
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p id="demo22"></p>
+
+<script>
+    document.getElementById("demo22").innerHTML = 2 == "John";
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p id="demo23"></p>
+
+<script>
+    document.getElementById("demo23").innerHTML = "2" < "12";
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p id="demo24"></p>
+
+<script>
+    document.getElementById("demo24").innerHTML = "2" > "12";
+</script>
+
+
+<h2>JavaScript Comparison</h2>
+<p id="demo25"></p>
+
+<script>
+    document.getElementById("demo25").innerHTML = "2" == "12";
+</script>
+
+
+<h2>JavaScript Comparisons</h2>
+<p>Input your age and click the button:</p>
+<input id="age1" value="18"/>
+<button onclick="myFunction()">Try it</button>
+<p id="demo26"></p>
+
+<script>
+    function myFunction() {
+        let voteable;
+        let age = Number(document.getElementById("age").value);
+        if (isNaN(age)) {
+            voteable = "Input is not a number";
+        } else {
+            voteable = (age < 18) ? "Too young" : "Old enough";
+        }
+        document.getElementById("demo26").innerHTML = voteable + " to vote";
+    }
+</script>
+
+
+<h1>JavaScript Operators</h1>
+<h2>The ?? Operator</h2>
+<p>The ?? operator returns the first argument if it is not nullish (null or undefined). Otherwise it returns the
+    second.</p>
+<p id="demo27"></p>
+
+<script>
+    let name = null;
+    let text = "missing";
+    let result = name ?? text;
+    document.getElementById("demo27").innerHTML = "The name is " + result;
+</script>
+
+
+<h1>JavaScript Operators</h1>
+<h2>The ?. Operator</h2>
+<p>The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).</p>
+<p>Car name is:</p>
+<p id="demo28"></p>
+
+<script>
+    const car = {type: "Fiat", model: "500", color: "white"};
+    let nameA = car?.name;
+    document.getElementById("demo28").innerHTML = nameA;
+</script>
+</body>
+</html>

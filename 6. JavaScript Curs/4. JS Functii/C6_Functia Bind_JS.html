@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Function bind()</h1>
+<p>This example creates 2 objects (person and member).</p>
+<p>The member object borrows the fullname method from person:</p>
+<p id="demo1"></p>
+
+<script>
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+
+    const member = {
+        firstName: "Hege",
+        lastName: "Nilsen",
+    }
+
+    let fullName = person.fullName.bind(member);
+
+    document.getElementById("demo1").innerHTML = fullName();
+</script>
+
+
+<h1>JavaScript Function bind()</h1>
+<p>In this example, the person object has a display method:</p>
+<p id="demo2"></p>
+
+<script>
+    const personA = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+            let x = document.getElementById("demo2");
+            x.innerHTML = this.firstName + " " + this.lastName;
+        }
+    }
+
+    personA.display();
+</script>
+
+
+<h1>JavaScript Function bind()</h1>
+<p>This example will try to display a person name after 3 seconds.</p>
+<p id="demo3"></p>
+
+<script>
+    const personB = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+            let x = document.getElementById("demo3");
+            x.innerHTML = this.firstName + " " + this.lastName;
+        }
+    }
+
+    setTimeout(personB.display, 3000);
+</script>
+
+
+<h1>JavaScript Function bind()</h1>
+<p>This example will display a person name after 3 seconds:</p>
+<p id="demo4"></p>
+
+<script>
+    const personC = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+            let x = document.getElementById("demo4");
+            x.innerHTML = this.firstName + " " + this.lastName;
+        }
+    }
+
+    let display = personC.display.bind(personC);
+    setTimeout(display, 3000);
+</script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Iterables</h2>
+<p>Iterate over a String:</p>
+<p id="demo1"></p>
+
+<script>
+    // Create a String
+    const name = "W3Schools";
+
+    // List all Elements
+    let text = ""
+    for (const x of name) {
+        text += x + "<br>";
+    }
+
+    document.getElementById("demo1").innerHTML = text;
+</script>
+
+
+<h2>JavaScript Iterables</h2>
+<p>Iterate over an Array:</p>
+<p id="demo2"></p>
+
+<script>
+    // Create aa Array
+    const letters = ["a", "b", "c"];
+
+    // List all Elements
+    let text2 = "";
+    for (const x of letters) {
+        text2 += x + "<br>";
+    }
+
+    document.getElementById("demo2").innerHTML = text2;
+</script>
+
+
+<h2>JavaScript Iterables</h2>
+<p>Home Made Iterable:</p>
+<p id="demo3"></p>
+
+<script>
+    // Home Made Iterable
+    function myNumbers() {
+        let n = 0;
+        return {
+            next: function () {
+                n += 10;
+                return {value: n, done: false};
+            }
+        };
+    }
+
+    // Create Iterable
+    const n = myNumbers();
+    n.next(); // 10
+    n.next(); // 20
+    n.next(); // 30
+
+    document.getElementById("demo3").innerHTML = n.next().value;
+</script>
+
+
+<h2>JavaScript Iterables</h2>
+<p id="demo4"></p>
+
+<script>
+    // Create an Object
+    myNumbers = {};
+
+    // Make it Iterable
+    myNumbers[Symbol.iterator] = function () {
+        let n = 0;
+        done = false;
+        return {
+            next() {
+                n += 10;
+                if (n == 100) {
+                    done = true
+                }
+                return {value: n, done: done};
+            }
+        };
+    }
+
+    let text4 = ""
+    for (const num of myNumbers) {
+        text4 += num + "<br>"
+    }
+
+    document.getElementById("demo4").innerHTML = text4;
+</script>
+
+
+<h2>JavaScript Iterables</h2>
+<p id="demo5"></p>
+
+<script>
+    // Create an Object
+    myNumbers = {};
+
+    // Make it Iterable
+    myNumbers[Symbol.iterator] = function () {
+        let n = 0;
+        done = false;
+        return {
+            next() {
+                n += 10;
+                if (n == 100) {
+                    done = true
+                }
+                return {value: n, done: done};
+            }
+        };
+    }
+
+    // Create an Iterator
+    let iterator = myNumbers[Symbol.iterator]();
+
+    let text5 = ""
+    while (true) {
+        const result = iterator.next();
+        if (result.done) break;
+        text5 += result.value + "<br>";
+    }
+
+    document.getElementById("demo5").innerHTML = text5;
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+</head>
+<body>
+
+<h2>JavaScript String Methods</h2>
+<p>The charAt() method returns the character at a given position in a string:</p>
+<p id="demo1"></p>
+
+<script>
+    var str = "HELLO WORLD";
+    document.getElementById("demo1").innerHTML = str.charAt(0);
+</script>
+
+
+<h2>JavaScript String Methods</h2>
+<p>ECMAScript 5 allows property acces on strings:</p>
+<p id="demo2"></p>
+
+<script>
+    var str = "HELLO WORLD";
+    document.getElementById("demo2").innerHTML = str[0];
+</script>
+
+
+<h2>JavaScript Strings</h2>
+<p>
+    You can break a code line within a text string with a backslash.
+</p>
+<p id="demo3"></p>
+
+<script>
+    document.getElementById("demo3").innerHTML = "Hello \
+Dolly!";
+</script>
+
+
+<h2>JavaScript Strings</h2>
+<p>The safest way to break a code line in a string is using string addition.</p>
+<p id="demo4"></p>
+
+<script>
+    document.getElementById("demo4").innerHTML = "Hello " +
+        "Dolly!";
+</script>
+
+
+<h2>ECMAScript 5</h2>
+<p>ECMAScript 5 allows reserwed words as propery names.</p>
+<p id="demo5"></p>
+
+<script>
+    var obj = {name: "John", new: "yes"};
+    document.getElementById("demo5").innerHTML = obj.new;
+</script>
+
+
+<h1>JavaScript Strings</h1>
+<h2>The trim() Method</h2>
+<p id="demo6"></p>
+
+<script>
+    let text1 = "     Hello World!     ";
+    let text2 = text1.trim();
+
+    document.getElementById("demo6").innerHTML =
+        "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+</script>
+
+
+<h2>JavaScript Array.isArray()</h2>
+<p>Click the button to check if "fruits" is an array.</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo7"></p>
+
+<script>
+    function myFunction() {
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        var x = document.getElementById("demo7");
+        x.innerHTML = Array.isArray(fruits);
+    }
+</script>
+
+
+<h2>JavaScript Array.forEach()</h2>
+<p>Calls a function once for each array element.</p>
+<p id="demo8"></p>
+
+<script>
+    var txt = "";
+    var numbers = [45, 4, 9, 16, 25];
+    numbers.forEach(myFunction);
+    document.getElementById("demo8").innerHTML = txt;
+
+    function myFunction(value) {
+        txt = txt + value + "<br>";
+    }
+</script>
+
+
+<h2>JavaScript Array.map()</h2>
+<p>Creates a new array by performing a function on each array element.</p>
+<p id="demo9"></p>
+
+<script>
+    var numbers1 = [45, 4, 9, 16, 25];
+    var numbers2 = numbers1.map(myFunction);
+
+    document.getElementById("demo9").innerHTML = numbers2;
+
+    function myFunction(value, index, array) {
+        return value * 2;
+    }
+</script>
+
+
+<h2>JavaScript Array.filter()</h2>
+<p>Creates a new array with all array elements that passes a test.</p>
+<p id="demo10"></p>
+
+<script>
+    var numbers = [45, 4, 9, 16, 25];
+    var over18 = numbers.filter(myFunction);
+
+    document.getElementById("demo10").innerHTML = over18;
+
+    function myFunction(value, index, array) {
+        return value > 18;
+    }
+</script>
+
+
+<h2>JavaScript Array.reduce()</h2>
+<p>This example finds the sum of all numbers in an array:</p>
+<p id="demo11"></p>
+
+<script>
+    var numbers = [45, 4, 9, 16, 25];
+    var sum = numbers.reduce(myFunction);
+
+    document.getElementById("demo11").innerHTML = "The sum is " + sum;
+
+    function myFunction(total, value, index, array) {
+        return total + value;
+    }
+</script>
+
+
+<h2>JavaScript Array.reduceRight()</h2>
+<p>This example finds the sum of all numbers in an array:</p>
+<p id="demo12"></p>
+
+<script>
+    var numbers = [45, 4, 9, 16, 25];
+    var sum = numbers.reduceRight(myFunction);
+
+    document.getElementById("demo12").innerHTML = "The sum is " + sum;
+
+    function myFunction(total, value) {
+        return total + value;
+    }
+</script>
+
+
+<h2>JavaScript Array.every()</h2>
+<p>The every() method checks if all array values pass a test.</p>
+<p id="demo13"></p>
+
+<script>
+    var numbers = [45, 4, 9, 16, 25];
+    var allOver18 = numbers.every(myFunction);
+
+    document.getElementById("demo13").innerHTML = "All over 18 is " + allOver18;
+
+    function myFunction(value, index, array) {
+        return value > 18;
+    }
+</script>
+
+
+<h2>JavaScript Array.some()</h2>
+<p>The some() method checks if some array values pass a test.</p>
+<p id="demo14"></p>
+
+<script>
+    var numbers = [45, 4, 9, 16, 25];
+    var allOver18 = numbers.some(myFunction);
+
+    document.getElementById("demo14").innerHTML = "Some over 18 is " + allOver18;
+
+    function myFunction(value) {
+        return value > 18;
+    }
+</script>
+
+
+<h2>JavaScript Array.indexOf()</h2>
+<p id="demo15"></p>
+
+<script>
+    const fruits = ["Apple", "Orange", "Apple", "Mango"];
+    let position = fruits.indexOf("Apple") + 1;
+
+    document.getElementById("demo15").innerHTML = "Apple is found in position " + position;
+</script>
+
+
+<h2>JavaScript Array.lastIndexOf()</h2>
+<p id="demo16"></p>
+
+<script>
+    const fruitsA = ["Apple", "Orange", "Apple", "Mango"];
+    let positionA = fruitsA.lastIndexOf("Apple") + 1;
+
+    document.getElementById("demo16").innerHTML = "Apple is found in position " + positionA;
+</script>
+
+
+<h2>Creating an Object from a JSON String</h2>
+<p id="demo17"></p>
+
+<script>
+    const txt2 = '{"name":"John", "age":30, "city":"New York"}'
+    const obj2 = JSON.parse(txt2);
+    document.getElementById("demo17").innerHTML = obj2.name + ", " + obj2.age;
+</script>
+
+
+<h2>Create a JSON string from a JavaScript object.</h2>
+<p id="demo18"></p>
+
+<script>
+    const obj3 = {name: "John", age: 30, city: "New York"};
+    const myJSON = JSON.stringify(obj3);
+    document.getElementById("demo18").innerHTML = myJSON;
+</script>
+
+
+<h2>JavaScript Date.now()</h2>
+<p>Date.now() is new in ECMAScript 5 (2009):</p>
+<p id="demo19"></p>
+<p id="demo20"></p>
+
+<script>
+    document.getElementById("demo19").innerHTML = Date.now();
+    var d = new Date();
+    document.getElementById("demo20").innerHTML = d.getTime();
+</script>
+
+
+<h1>JavaScript Dates</h1>
+<h2>The toISOString() Method</h2>
+<p>Convert a date to a string using the ISO standard:</p>
+<p id="demo21"></p>
+
+<script>
+    const d1 = new Date();
+    document.getElementById("demo21").innerHTML = d1.toISOString();
+</script>
+
+
+<h2>JavaScript Date.toJSON()</h2>
+<p id="demo22"></p>
+
+<script>
+    d2 = new Date();
+    document.getElementById("demo22").innerHTML = d2.toJSON();
+</script>
+
+
+<h2>JavaScript Getters and Setters</h2>
+<p>Getters and setters allow you to get and set properties via methods.</p>
+<p>This example creates a getter for a property called fullName.</p>
+<p id="demo23"></p>
+
+<script>
+    // Create an object:
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        get fullName() {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+    // Display data from the object using a getter:
+    document.getElementById("demo23").innerHTML = person.fullName;
+</script>
+
+
+<h2>JavaScript Getters and Setters</h2>
+<p>Getters and setters allow you to get and set properties via methods.</p>
+<p>This example creates a setter and a getter for the language property.</p>
+<p id="demo24"></p>
+
+<script>
+    // Create an object:
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "NO",
+        get lang() {
+            return this.language;
+        },
+        set lang(value) {
+            this.language = value;
+        }
+    };
+    // Set an object property using a setter:
+    person.lang = "en";
+    // Display data from the object using a getter:
+    document.getElementById("demo24").innerHTML = person.lang;
+</script>
+
+
+<h2>JavaScript Getters and Setters</h2>
+<p>Getters and setters allow you to get and set properties via methods.</p>
+<p>This example has a modified setter to secure upper case uppdates of language.</p>
+<p id="demo25"></p>
+
+<script>
+    // Create an object:
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "",
+        set lang(value) {
+            this.language = value.toUpperCase();
+        }
+    };
+    // Set an object property using a setter:
+    person.lang = "en";
+    // Display data from the object:
+    document.getElementById("demo25").innerHTML = person.language;
+</script>
+
+
+<h2>JavaScript defineProperty()</h2>
+<p id="demo26"></p>
+
+<script>
+    // Create an Object:
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "NO",
+    };
+    // Change a Property:
+    Object.defineProperty(person, "language", {
+        value: "EN",
+        writable: true,
+        enumerable: true,
+        configurable: true
+    });
+    // Enumerate Properties
+    txt = "";
+    for (var x in person) {
+        txt += person[x] + "<br>";
+    }
+    document.getElementById("demo26").innerHTML = txt;
+</script>
+
+
+<h2>JavaScript defineProperty()</h2>
+<p id="demo27"></p>
+
+<script>
+    // Create an Object:
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "NO",
+    };
+    // Change a Property:
+    Object.defineProperty(person, "language", {
+        value: "EN",
+        writable: true,
+        enumerable: false,
+        configurable: true
+    });
+    // Enumerate Properties
+    txt = "";
+    for (var x in person) {
+        txt += person[x] + "<br>";
+    }
+    document.getElementById("demo27").innerHTML = txt;
+</script>
+
+
+<h2>JavaScript defineProperty()</h2>
+<p id="demo28"></p>
+
+<script>
+    // Create an Object:
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "NO"
+    };
+    // Change a Property:
+    Object.defineProperty(person, "language", {
+        get: function () {
+            return language
+        },
+        set: function (value) {
+            language = value.toUpperCase()
+        }
+    });
+    // Change language
+    person.language = "en";
+    // Display language
+    document.getElementById("demo28").innerHTML = person.language;
+</script>
+
+
+<h1>JavaScript Function bind()</h1>
+<p>This example creates 2 objects (person and member).</p>
+<p>The member object borrows the fullname method from person:</p>
+<p id="demo29"></p>
+
+<script>
+    const personA = {
+        firstName: "John",
+        lastName: "Doe",
+        fullNameA: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    }
+
+    const memberA = {
+        firstName: "Hege",
+        lastName: "Nilsen",
+    }
+
+    let fullNameA = personA.fullNameA.bind(memberA);
+
+    document.getElementById("demo29").innerHTML = fullNameA();
+</script>
+</body>
+</html>

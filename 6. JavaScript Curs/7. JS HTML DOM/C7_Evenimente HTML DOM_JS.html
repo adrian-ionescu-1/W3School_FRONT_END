@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function lighton() {
+            document.getElementById('myimage').src = "pic_bulbon.gif";
+        }
+
+        function lightoff() {
+            document.getElementById('myimage').src = "pic_bulboff.gif";
+        }
+
+
+        function mymessage() {
+            alert("This message was triggered from the onload event");
+        }
+
+
+        function myFunction(x) {
+            x.style.background = "purple";
+        }
+    </script>
+</head>
+
+<body onload="mymessage()"> <!--onload="checkCookies()"-->
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="changeText(this)">Click on this text!</h2>
+
+<script>
+    function changeText(id) {
+        id.innerHTML = "Ooops!";
+    }
+</script>
+
+
+<h2>JavaScript HTML Events</h2>
+<p>Click the button to display the date.</p>
+<button onclick="displayDateA()">The time is?</button>
+
+<script>
+    function displayDateA() {
+        document.getElementById("demo1").innerHTML = Date();
+    }
+</script>
+<p id="demo1"></p>
+
+
+<h2>JavaScript HTML Events</h2>
+<p>Click "Try it" to execute the displayDate() function.</p>
+<button id="myBtn">Try it</button>
+<p id="demo2"></p>
+
+<script>
+    document.getElementById("myBtn").onclick = displayDateB;
+
+    function displayDateB() {
+        document.getElementById("demo2").innerHTML = Date();
+    }
+</script>
+
+
+<h2>JavaScript HTML Events</h2>
+<p id="demo3"></p>
+
+<script>
+    function checkCookies() {
+        var text = "";
+        if (navigator.cookieEnabled == true) {
+            text = "Cookies are enabled.";
+        } else {
+            text = "Cookies are not enabled.";
+        }
+        document.getElementById("demo3").innerHTML = text;
+    }
+</script>
+
+
+<h2>JavaScript HTML Events</h2>
+Enter your name: <input type="text" id="fname" onchange="upperCase()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+    function upperCase() {
+        const x = document.getElementById("fname");
+        x.value = x.value.toUpperCase();
+    }
+</script>
+
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+     style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+    Mouse Over Me
+</div>
+
+<script>
+    function mOver(obj) {
+        obj.innerHTML = "Thank You"
+    }
+
+    function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me"
+    }
+</script>
+
+
+<br>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+     style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+    Click Me
+</div>
+
+<script>
+    function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Release Me";
+    }
+
+    function mUp(obj) {
+        obj.style.backgroundColor = "#ff00ff";
+        obj.innerHTML = "Thank You";
+    }
+</script>
+
+
+<br>
+<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="pic_bulboff.gif" width="100" height="180"/>
+<p>Click mouse and hold down!</p>
+
+
+Enter your name: <input type="text" onfocus="myFunction(this)">
+<p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+
+<h1 onmouseover="style.color='lime'" onmouseout="style.color='blue'">Mouse over this text</h1>
+</body>
+</html>

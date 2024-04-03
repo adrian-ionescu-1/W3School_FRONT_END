@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript String Methods</h1>
+<p>Search a string for "W3Schools", and display the position of the match:</p>
+<p id="demo1"></p>
+
+<script>
+    let text = "Visit W3Schools!";
+    let n = text.search("W3Schools");
+    document.getElementById("demo1").innerHTML = n;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Search a string for "w3Schools", and display the position of the match:</p>
+<p id="demo2"></p>
+
+<script>
+    let text2 = "Visit W3Schools!";
+    let n2 = text2.search(/w3Schools/i);
+    document.getElementById("demo2").innerHTML = n2;
+</script>
+
+
+<h1>JavaScript String Methods</h1>
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+<button onclick="myFunctionA()">Try it</button>
+<p id="demo3">Please visit Microsoft!</p>
+
+<script>
+    function myFunctionA() {
+        let text = document.getElementById("demo3").innerHTML;
+        document.getElementById("demo3").innerHTML =
+            text.replace("Microsoft", "W3Schools");
+    }
+</script>
+
+
+<h2>JavaScript String Methods</h2>
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+<button onclick="myFunctionB()">Try it</button>
+<p id="demo4">Please visit Microsoft!</p>
+
+<script>
+    function myFunctionB() {
+        let text = document.getElementById("demo4").innerHTML;
+        document.getElementById("demo4").innerHTML =
+            text.replace(/microsoft/i, "W3Schools");
+    }
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a case-insensitive search for "w3schools" in a string:</p>
+<p id="demo5"></p>
+
+<script>
+    let text3 = "Visit W3Schools";
+    let result = text3.match(/w3schools/i);
+    document.getElementById("demo5").innerHTML = result;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for "is" in a string:</p>
+<p id="demo6"></p>
+
+<script>
+    let text6 = "Is this all there is?";
+    let result6 = text6.match(/is/g);
+    document.getElementById("demo6").innerHTML = result6;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a multiline search for "is" at the beginning of each line in a string:</p>
+<p id="demo7"></p>
+
+<script>
+    let text7 = "\nIs th\nis it?";
+    let result7 = text7.match(/^is/m);
+    document.getElementById("demo7").innerHTML = "Result is: " + result7;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for the character "h" in a string:</p>
+<p id="demo8"></p>
+
+<script>
+    let text8 = "Is this all there is?";
+    let result8 = text8.match(/[h]/g);
+    document.getElementById("demo8").innerHTML = result8;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for the numbers 1 to 4 in a string:</p>
+<p id="demo9"></p>
+
+<script>
+    let text9 = "123456789";
+    let result9 = text9.match(/[1-4]/g);
+    document.getElementById("demo9").innerHTML = result9;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for any of the specified alternatives (red|green):</p>
+<p id="demo10"></p>
+
+<script>
+    let text10 = "re, green, red, green, gren, gr, blue, yellow";
+    let result10 = text10.match(/(red|green)/g);
+    document.getElementById("demo10").innerHTML = result10;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for digits in a string:</p>
+<p id="demo11"></p>
+
+<script>
+    let text11 = "Give 100%!";
+    let result11 = text11.match(/\d/g);
+    document.getElementById("demo11").innerHTML = result11;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for whitespace characters in a string:</p>
+<p id="demo12"></p>
+
+<script>
+    let text12 = "Is this all there is?";
+    let result12 = text12.match(/\s/g);
+    document.getElementById("demo12").innerHTML = result12;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Search for the characters "LO" in the <b>beginning</b> of a word in the phrase:</p>
+<p>"HELLO, LOOK AT YOU!"</p>
+<p>Found in position: <span id="demo13"></span></p>
+
+<script>
+    let text13 = "HELLO, LOOK AT YOU!";
+    let result13 = text13.search(/\bLO/);
+    document.getElementById("demo13").innerHTML = result13;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Search for the characters "LO" in the <b>end</b> of a word in the phrase:</p>
+<p>"HELLO, LOOK AT YOU!"</p>
+<p>Found in position: <span id="demo14"></span></p>
+
+<script>
+    let text14 = "HELLO, LOOK AT YOU!";
+    let result14 = text14.search(/LO\b/);
+    document.getElementById("demo14").innerHTML = result14;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for the hexadecimal number 0057 (W) in a string:</p>
+<p id="demo15"></p>
+
+<script>
+    let text15 = "Visit W3Schools. Hello World!";
+    let result15 = text15.match(/\u0057/g);
+    document.getElementById("demo15").innerHTML = result15;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for at least one "o" in a string:</p>
+<p id="demo16"></p>
+
+<script>
+    let text16 = "Hellooo World! Hello W3Schools!";
+    let result16 = text16.match(/o+/g);
+    document.getElementById("demo16").innerHTML = result16;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for an "l", followed by zero or more "o" characters:</p>
+<p id="demo17"></p>
+
+<script>
+    let text17 = "Hellooo World! Hello W3Schools!";
+    let result17 = text17.match(/lo*/g);
+    document.getElementById("demo17").innerHTML = result17;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Do a global search for a "1", followed by zero or one "0" characters:</p>
+<p id="demo18"></p>
+
+<script>
+    let text18 = "1, 100 or 1000?";
+    let result18 = text18.match(/10?/g);
+    document.getElementById("demo18").innerHTML = result18;
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p>Search for an "e" in the next paragraph:</p>
+<p id="p01">The best things in life are free!</p>
+<p id="demo19"></p>
+
+<script>
+    let text19 = document.getElementById("p01").innerHTML;
+    const pattern = /e/;
+    document.getElementById("demo19").innerHTML = pattern.test(text19);
+</script>
+
+
+<h2>JavaScript Regular Expressions</h2>
+<p id="demo20"></p>
+
+<script>
+    const obj = /e/.exec("The best things in life are free!");
+    document.getElementById("demo20").innerHTML =
+        "Found " + obj[0] + " in position " + obj.index + " in the text: " + obj.input;
+</script>
+</body>
+</html>

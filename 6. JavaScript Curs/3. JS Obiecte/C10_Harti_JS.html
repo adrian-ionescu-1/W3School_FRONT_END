@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Map Objects</h2>
+<p>Creating a Map from an Array:</p>
+<p id="demo1"></p>
+
+<script>
+    // Create a Map
+    const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    document.getElementById("demo1").innerHTML = fruits.get("apples");
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.set():</p>
+<p id="demo2"></p>
+
+<script>
+    // Create a Map
+    const fruits2 = new Map();
+
+    // Set Map Values
+    fruits2.set("apples", 500);
+    fruits2.set("bananas", 300);
+    fruits2.set("oranges", 200);
+
+    document.getElementById("demo2").innerHTML = fruits2.get("apples");
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.set():</p>
+<p id="demo3"></p>
+
+<script>
+    // Create a Map
+    const fruits3 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    fruits3.set("apples", 200);
+    document.getElementById("demo3").innerHTML = fruits3.get("apples");
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.get():</p>
+<p id="demo4"></p>
+
+<script>
+    // Create a Map
+    const fruits4 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    document.getElementById("demo4").innerHTML = fruits4.get("apples");
+</script>
+
+
+<h2>JavaScript Maps</h2>
+<p>Using Map.size:</p>
+<p id="demo5"></p>
+
+<script>
+    // Create a Map
+    const fruits5 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    document.getElementById("demo5").innerHTML = fruits5.size;
+</script>
+
+
+<h2>JavaScript Maps</h2>
+<p>Deleting Map elements:</p>
+<p id="demo6"></p>
+
+<script>
+    // Create a Map
+    const fruits6 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    // Delete an Element
+    fruits6.delete("apples");
+
+    document.getElementById("demo6").innerHTML = fruits6.size;
+</script>
+
+
+<h2>JavaScript Maps</h2>
+<p>Clearing a Map:</p>
+<p id="demo7"></p>
+
+<script>
+    // Create a Map
+    const fruits7 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    // Clear the Map
+    fruits7.clear();
+
+    document.getElementById("demo7").innerHTML = fruits7.size;
+</script>
+
+
+<h2>JavaScript Maps</h2>
+<p>Using Map.has():</p>
+<p id="demo8"></p>
+
+<script>
+    // Create a Map
+    const fruits8 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    document.getElementById("demo8").innerHTML = fruits8.has("apples");
+</script>
+
+
+<h2>JavaScript Maps</h2>
+<p>Using Map.has():</p>
+<p id="demo9"></p>
+
+<script>
+    // Create a Map
+    const fruits9 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    // Delete an Element
+    fruits9.delete("apples");
+
+    document.getElementById("demo9").innerHTML = fruits9.has("apples");
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Map typeof:</p>
+<p id="demo10"></p>
+
+<script>
+    // Create a Map
+    const fruits10 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    document.getElementById("demo10").innerHTML = typeof fruits10;
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Map instanceof:</p>
+<p id="demo11"></p>
+
+<script>
+    // Create a Map
+    const fruits11 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    document.getElementById("demo11").innerHTML = fruits11 instanceof Map;
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.forEach():</p>
+<p id="demo12"></p>
+
+<script>
+    // Create a Map
+    const fruits12 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    let text = "";
+    fruits12.forEach(function (value, key) {
+        text += key + ' = ' + value + "<br>"
+    })
+
+    document.getElementById("demo12").innerHTML = text;
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.entries():</p>
+<p id="demo13"></p>
+
+<script>
+    // Create a Map
+    const fruits13 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    let text13 = "";
+    for (const x of fruits13.entries()) {
+        text13 += x + "<br>";
+    }
+
+    document.getElementById("demo13").innerHTML = text13;
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.keys():</p>
+<p id="demo14"></p>
+
+<script>
+    // Create a Map
+    const fruits14 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    let text14 = "";
+    for (const x of fruits.keys()) {
+        text14 += x + "<br>";
+    }
+
+    document.getElementById("demo14").innerHTML = text14;
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.values():</p>
+<p id="demo15"></p>
+
+<script>
+    // Create a Map
+    const fruits15 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    let text15 = "";
+    for (const x of fruits15.values()) {
+        text15 += x + "<br>";
+    }
+
+    document.getElementById("demo15").innerHTML = text15;
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Using Map.values():</p>
+<p id="demo16"></p>
+
+<script>
+    // Create a Map
+    const fruits16 = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+
+    let total = 0;
+    for (const x of fruits16.values()) {
+        total += x;
+    }
+
+    document.getElementById("demo16").innerHTML = total;
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p>Being able to use objects as keys is an important Map feature:</p>
+<p id="demo17"></p>
+
+<script>
+    // Create Objects
+    const apples = {name: 'Apples'};
+    const bananas = {name: 'Bananas'};
+    const oranges = {name: 'Oranges'};
+
+    // Create a Map
+    const fruits17 = new Map();
+
+    // Add the Objects to the Map
+    fruits17.set(apples, 500);
+    fruits17.set(bananas, 300);
+    fruits17.set(oranges, 200);
+
+    document.getElementById("demo17").innerHTML = fruits17.get(apples);
+</script>
+
+
+<h2>JavaScript Map Objects</h2>
+<p id="demo18"></p>
+
+<script>
+    // Create Objects
+    const apples2 = {name: 'Apples'};
+    const bananas2 = {name: 'Bananas'};
+    const oranges2 = {name: 'Oranges'};
+
+    // Create a Map
+    const fruits18 = new Map();
+
+    // Add Elements to the Map
+    fruits18.set(apples2, 500);
+    fruits18.set(bananas2, 300);
+    fruits18.set(oranges2, 200);
+
+    document.getElementById("demo18").innerHTML = fruits18.get("apples");
+</script>
+</body>
+</html>
+

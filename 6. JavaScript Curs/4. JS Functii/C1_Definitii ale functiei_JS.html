@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>This example calls a function which performs a calculation and returns the result:</p>
+<p id="demo1"></p>
+
+<script>
+    var x = myFunction(4, 3);
+    document.getElementById("demo1").innerHTML = x;
+
+    function myFunction(a, b) {
+        return a * b;
+    }
+</script>
+
+
+<h2>JavaScript Functions</h2>
+<p>A function can be stored in a variable:</p>
+<p id="demo2"></p>
+
+<script>
+    const xa = function (a, b) {
+        return a * b
+    };
+    document.getElementById("demo2").innerHTML = xa;
+</script>
+
+
+<h2>JavaScript Functions</h2>
+<p>After a function has been stored in a variable,
+    the variable can be used as a function:</p>
+<p id="demo3"></p>
+
+<script>
+    const xb = function (a, b) {
+        return a * b
+    };
+    document.getElementById("demo3").innerHTML = xb(4, 3);
+</script>
+
+
+<h2>JavaScript Functions</h2>
+<p>JavaScript has an built-in function constructor.</p>
+<p id="demo4"></p>
+
+<script>
+    const myFunctionA = new Function("a", "b", "return a * b");
+    document.getElementById("demo4").innerHTML = myFunctionA(4, 3);
+</script>
+
+
+<h2>JavaScript Functions</h2>
+<p id="demo5"></p>
+
+<script>
+    const myFunctionB = function (a, b) {
+        return a * b
+    }
+    document.getElementById("demo5").innerHTML = myFunctionB(4, 3);
+</script>
+
+
+<p>Functions can be invoked automatically without being called:</p>
+<p id="demo6"></p>
+
+<script>
+    (function () {
+        document.getElementById("demo6").innerHTML = "Hello! I called myself";
+    })();
+</script>
+
+
+<h2>JavaScript Functions</h2>
+<p>Functions can be treated as values:</p>
+<p>x = myFunction(4,3) or x = 12</p>
+<p>In both cases, x becomes a number with the value of 12.</p>
+<p id="demo7"></p>
+
+<script>
+    function myFunction(a, b) {
+        return a * b;
+    }
+
+    let xc = myFunction(4, 3);
+    document.getElementById("demo7").innerHTML = xc;
+</script>
+
+
+<h2>JavaScript Functions</h2>
+<p>Functions can be used in expressions.</p>
+<p id="demo8"></p>
+
+<script>
+    function myFunction(a, b) {
+        return a * b;
+    }
+
+    let xd = myFunction(4, 3) * 2;
+    document.getElementById("demo8").innerHTML = xd;
+</script>
+
+
+<p>The arguments.length property returns the number of arguments received by the function:</p>
+<p id="demo9"></p>
+
+<script>
+    function myFunction(a, b) {
+        return arguments.length;
+    }
+
+    document.getElementById("demo9").innerHTML = myFunction(4, 3);
+</script>
+
+
+<h1>JavaScript Functions</h1>
+<h2>The toString() Method</h2>
+<p>The toString() method returns the function as a string:</p>
+<p id="demo10"></p>
+
+<script>
+    function myFunction(a, b) {
+        return a * b;
+    }
+
+    document.getElementById("demo10").innerHTML = myFunction.toString();
+</script>
+
+
+<h2>JavaScript Arrow Functions</h2>
+<p>With arrow functions, you don't have to type the function keyword, the return keyword, and the curly brackets.</p>
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+<p id="demo11"></p>
+
+<script>
+    const xe = (xe, y) => xe * y;
+    document.getElementById("demo11").innerHTML = xe(5, 5);
+</script>
+
+
+<h2>JavaScript Arrow Functions</h2>
+<p>Arrow functions are not supported in IE11 or earlier.</p>
+<p id="demo12"></p>
+
+<script>
+    const xf = (xf, y) => {
+        return xf * y
+    };
+    document.getElementById("demo12").innerHTML = xf(5, 5);
+</script>
+
+</body>
+</html>   

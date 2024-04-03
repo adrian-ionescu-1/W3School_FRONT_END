@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+<p>Displaying a JavaScript object will output [object Object]:</p>
+<p id="demo1"></p>
+
+<script>
+    const person = {
+        name: "John",
+        age: 30,
+        city: "New York"
+    };
+
+    document.getElementById("demo1").innerHTML = person;
+</script>
+
+
+<h2>JavaScript Objects</h2>
+<p>Display object properties:</p>
+<p id="demo2"></p>
+
+<script>
+    const person2 = {
+        name: "John",
+        age: 30,
+        city: "New York"
+    };
+
+    document.getElementById("demo2").innerHTML = person2.name + ", " + person2.age + ", " + person2.city;
+</script>
+
+
+<h2>JavaScript Objects</h2>
+<p>Display object properties:</p>
+<p id="demo3"></p>
+
+<script>
+    const person3 = {
+        name: "John",
+        age: 30,
+        city: "New York"
+    };
+
+    let txt = "";
+    for (let x in person3) {
+        txt += person3[x] + " ";
+    }
+    ;
+
+    document.getElementById("demo3").innerHTML = txt;
+</script>
+
+
+<h2>JavaScript Objects</h2>
+<p>Object.values() converts an object to an array.</p>
+<p id="demo4"></p>
+
+<script>
+    const person4 = {
+        name: "John",
+        age: 30,
+        city: "New York"
+    };
+
+    document.getElementById("demo4").innerHTML = Object.values(person4);
+</script>
+
+
+<h2>JavaScript Objects</h2>
+<p>Display properties in JSON format:</p>
+<p id="demo5"></p>
+
+<script>
+    const person5 = {
+        name: "John",
+        age: 30,
+        city: "New York"
+    };
+
+    document.getElementById("demo5").innerHTML = JSON.stringify(person5);
+</script>
+
+
+<h2>JavaScript Objects</h2>
+<p>JSON.stringify will convert dates into strings:</p>
+<p id="demo6"></p>
+
+<script>
+    var person6 = {
+        name: "John",
+        today: new Date()
+    };
+
+    document.getElementById("demo6").innerHTML = JSON.stringify(person6);
+</script>
+
+
+<h2>JavaScript Objects</h2>
+<p>JSON.stringify will not stringify functions:</p>
+<p id="demo7"></p>
+
+<script>
+    const person7 = {
+        name: "John",
+        age: function () {
+            return 30;
+        }
+    };
+
+    document.getElementById("demo7").innerHTML = JSON.stringify(person7);
+</script>
+
+
+<h2>JavaScript Display Objects</h2>
+<p>JSON.stringify will not stringify functions.</p>
+<p>You have to convert functions to strings first:</p>
+<p id="demo8"></p>
+
+<script>
+    const person8 = {
+        name: "John",
+        age: function () {
+            return 30;
+        }
+    };
+    person8.age = person8.age.toString();
+
+    document.getElementById("demo8").innerHTML = JSON.stringify(person8);
+</script>
+
+
+<h2>JavaScript Arrays</h2>
+<p>JSON.stringify can stringify arrays:</p>
+<p id="demo9"></p>
+
+<script>
+    const arr = ["John", "Peter", "Sally", "Jane"];
+    document.getElementById("demo9").innerHTML = JSON.stringify(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="id01">My First Page</h1>
+<p id="id02"></p>
+
+<script>
+    document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+</script>
+
+
+<h1 id="id01a">My First Page</h1>
+<p id="id02a"></p>
+
+<script>
+    document.getElementById("id02a").innerHTML = document.getElementById("id01a").firstChild.nodeValue;
+</script>
+
+
+<h1 id="id01b">My First Page</h1>
+<p id="id02b"></p>
+
+<script>
+    document.getElementById("id02b").innerHTML = document.getElementById("id01b").childNodes[0].nodeValue;
+</script>
+
+
+<h2>JavaScript HTMLDOM</h2>
+<p>Displaying document.body</p>
+<p id="demo1"></p>
+
+<script>
+    document.getElementById("demo1").innerHTML = document.body.innerHTML;
+</script>
+
+
+<h2>JavaScript HTMLDOM</h2>
+<p>Displaying document.documentElement</p>
+<p id="demo2"></p>
+
+<script>
+    document.getElementById("demo2").innerHTML = document.documentElement.innerHTML;
+</script>
+
+
+<h1 id="id01c">My First Page</h1>
+<p id="id02c"></p>
+
+<script>
+    document.getElementById("id02c").innerHTML = document.getElementById("id01c").nodeName;
+</script>
+
+
+<h1 id="id01d">My First Page</h1>
+<p id="id02d"></p>
+
+<script>
+    document.getElementById("id02d").innerHTML = document.getElementById("id01d").nodeType;
+</script>
+</body>
+</html>

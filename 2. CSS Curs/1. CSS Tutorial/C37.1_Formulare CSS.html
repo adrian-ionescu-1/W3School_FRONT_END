@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<style>
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submitOne] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submitOne]:hover {
+        background-color: #45a049;
+    }
+
+    div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    input[type=textOne] {
+        width: 100%;
+    }
+
+    input[type=textTwo] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+
+    input[type=textThree] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid red;
+        border-radius: 4px;
+    }
+
+    input[type=textFour] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid purple;
+    }
+
+    input[type=textFive] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background-color: #3CBC8D;
+        color: white;
+    }
+
+    input[type=textSix] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid #555;
+        outline: none;
+    }
+
+    input[type=textSix]:focus {
+        background-color: lightskyblue;
+    }
+
+    input[type=textSeven] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+
+    input[type=textSeven]:focus {
+        border: 3px solid rgb(104, 242, 18);
+    }
+
+    input[type=textEight] {
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+    }
+
+    input[type=textNine] {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        transition: width 0.4s ease-in-out;
+    }
+
+    input[type=textNine]:focus {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+    }
+
+    select {
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+    }
+
+    input[type=button], input[type=submit], input[type=reset] {
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+<h3>Using CSS to style an HTML Form</h3>
+
+<div>
+    <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <input type="submitOne" value="SubmitOne">
+    </form>
+</div>
+
+
+<h2>A full-width input field</h2>
+
+<form>
+    <label for="fname1">First Name</label>
+    <input type="textOne" id="fname1" name="fname1">
+</form>
+
+
+<h2>Padded input fields</h2>
+
+<form>
+    <label for="fname2">First Name</label>
+    <input type="textTwo" id="fname2" name="fname2">
+    <label for="lname2">Last Name</label>
+    <input type="textTwo" id="lname2" name="lname2">
+</form>
+
+
+<h2>Input fields with borders</h2>
+
+<form>
+    <label for="fname3">First Name</label>
+    <input type="textThree" id="fname3" name="fname3">
+    <label for="lname3">Last Name</label>
+    <input type="textThree" id="lname3" name="lname3">
+</form>
+
+
+<h2>Input fields with bottom border</h2>
+
+<form>
+    <label for="fname4">First Name</label>
+    <input type="textFour" id="fname4" name="fname4">
+    <label for="lname4">Last Name</label>
+    <input type="textFour" id="lname4" name="lname4">
+</form>
+
+
+<h2>Input fields with color</h2>
+
+<form>
+    <label for="fname5">First Name</label>
+    <input type="textFive" id="fname5" name="fname5" value="John">
+    <label for="lname5">Last Name</label>
+    <input type="textFive" id="lname5" name="lname5" value="Doe">
+</form>
+
+
+<h2>Input fields with color on :focus</h2>
+
+<p>Here, the input field gets a color when it gets focus (clicked on):</p>
+
+<form>
+    <label for="fname6">First Name</label>
+    <input type="textSix" id="fname6" name="fname6" value="John">
+    <label for="lname6">Last Name</label>
+    <input type="textSix" id="lname6" name="lname6" value="Doe">
+</form>
+
+
+<h2>Input fields with black border on :focus</h2>
+
+<p>Here, the input field gets a black border color when it gets focus (clicked on). We have also added the CSS
+    transition property to animate the border color (takes 0.5 seconds to change the color on focus):</p>
+
+<form>
+    <label for="fname7">First Name</label>
+    <input type="textSeven" id="fname7" name="fname7" value="John">
+    <label for="lname7">Last Name</label>
+    <input type="textSeven" id="lname7" name="lname7" value="Doe">
+</form>
+
+
+<h2>Input field with an icon inside</h2>
+
+<form>
+    <input type="textEight" name="search" placeholder="Search..">
+</form>
+
+
+<h2>Animate width of search input</h2>
+
+<form>
+    <input type="textNine" name="search" placeholder="Search..">
+</form>
+
+
+<h2>Styling textarea</h2>
+
+<p><strong>Tip:</strong> Use the resize property to prevent textareas from being resized (disable the "grabber" in the
+    bottom right corner):</p>
+
+<form>
+    <textarea>Some text...</textarea>
+</form>
+
+
+<h2>Styling a select menu</h2>
+
+<form>
+    <select id="country1" name="country1">
+        <option value="au">Australia</option>
+        <option value="ca">Canada</option>
+        <option value="usa">USA</option>
+    </select>
+</form>
+
+
+<h2>Styling form buttons</h2>
+
+<input type="button" value="Button">
+<input type="reset" value="Reset">
+<input type="submit" value="submit">
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Setting a default value to a function parameter.</p>
+<p id="demo1"></p>
+
+<script>
+    function myFunction(x, y) {
+        if (y === undefined) {
+            y = 2;
+        }
+        return x * y;
+    }
+
+    document.getElementById("demo1").innerHTML = myFunction(4);
+</script>
+
+
+<h1>JavaScript Functions</h1>
+<h2>Default Parameter Values</h2>
+<p>If y is not passed or undefined, then y = 10:</p>
+<p id="demo2"></p>
+
+<script>
+    function myFunction(x, y = 10) {
+        return x + y;
+    }
+
+    document.getElementById("demo2").innerHTML = myFunction(5);
+</script>
+
+
+<h1>JavaScript Functions</h1>
+<h2>The Rest Parameter</h2>
+<p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p>
+<p id="demo3"></p>
+
+<script>
+    function sum(...args) {
+        let sum = 0;
+        for (let arg of args) sum += arg;
+        return sum;
+    }
+
+    let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+    document.getElementById("demo3").innerHTML = x;
+</script>
+
+
+<h2>JavaScript Functions</h2>
+<p>Finding the largest number.</p>
+<p id="demo4"></p>
+
+<script>
+    function findMax() {
+        let max = -Infinity;
+        for (let i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+                max = arguments[i];
+            }
+        }
+        return max;
+    }
+
+    document.getElementById("demo4").innerHTML = findMax(4, 5, 6);
+</script>
+
+
+<h2>JavaScript Functions</h2>
+<p>Sum of all arguments:</p>
+<p id="demo5"></p>
+
+<script>
+    function sumAll() {
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+
+    document.getElementById("demo5").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+</script>
+</body>
+</html>

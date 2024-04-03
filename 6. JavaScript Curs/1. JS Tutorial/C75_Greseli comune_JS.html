@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Comparisons</h2>
+<p>This returns false (as expected) because x is not equal to 10:</p>
+<p id="demo1"></p>
+
+<script>
+    let xa = 0;
+    document.getElementById("demo1").innerHTML = Boolean(xa == 10);
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>This returns true (maybe not as expected), because 10 is true:</p>
+<p id="demo2"></p>
+
+<script>
+    let xb = 0;
+    document.getElementById("demo2").innerHTML = Boolean(xb = 10);
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>This if statement returns false (maybe not as expected), because 0 is false:</p>
+<p id="demo3"></p>
+
+<script>
+    let xc = 0;
+    document.getElementById("demo3").innerHTML = Boolean(xc = 0);
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>In regular comparison, data type does not matter. This if statement returns true:</p>
+<p id="demo4"></p>
+
+<script>
+    let xd = 10;
+    let yd = "10";
+    document.getElementById("demo4").innerHTML = Boolean(xd == yd);
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>In strict comparison, data type does matter. This if statement returns false:</p>
+<p id="demo5"></p>
+
+<script>
+    let xe = 10;
+    let ye = "10";
+    document.getElementById("demo5").innerHTML = Boolean(xe === ye);
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>It is a common mistake to forget that switch statements use strict comparison.</p>
+<p>This will work:</p>
+<p id="demo6"></p>
+
+<script>
+    let xf = 10;
+    switch (xf) {
+        case 10:
+            document.getElementById("demo6").innerHTML = "Hello";
+    }
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>It is a common mistake to forget that switch statements use strict comparison.</p>
+<p>This will not work:</p>
+<p id="demo7"></p>
+
+<script>
+    let xg = 10;
+    switch (xg) {
+        case "10":
+            document.getElementById("demo7").innerHTML = "Hello";
+    }
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>Adding a number as a number produces a different result from adding a number as a string:</p>
+<p id="demo8"></p>
+
+<script>
+    let yh = 10
+    yh += "5";
+    document.getElementById("demo8").innerHTML = yh;
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>Adding a number as a number produces a different result from adding a number as a string:</p>
+<p id="demo9"></p>
+
+<script>
+    let xj = 10;
+    let yj = "5";
+    let z = xj + yj;
+    document.getElementById("demo9").innerHTML = z;
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>All programming languages, including JavaScript, have difficulties with precise floating point values:</p>
+<p id="demo10"></p>
+
+<script>
+    let xk = 0.1;
+    let yk = 0.2;
+    let zk = xk + yk;
+    document.getElementById("demo10").innerHTML = zk;
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>All programming languages, including JavaScript, have difficulties with precise floating point values.</p>
+<p>To solve the problem, it helps to multiply and divide:</p>
+<p id="demo11"></p>
+
+<script>
+    let xl = 0.1;
+    let yl = 0.2;
+    let zl = (xl * 10 + yl * 10) / 10;
+    document.getElementById("demo11").innerHTML = zl;
+</script>
+
+
+<h2>Breaking a JavaScript Statement</h2>
+<p id="demo12"></p>
+
+<script>
+    document.getElementById("demo12").innerHTML =
+        "Hello World!";
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>Breaking a statement in the middle of a string will not work:</p>
+<p id="demo13"></p>
+
+<script>
+    document.getElementById("demo13").innerHTML = "Hello World!";
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>You must use a "backslash" if you must break a statement in a string:</p>
+<p id="demo14"></p>
+
+<script>
+    document.getElementById("demo14").innerHTML = "Hello \
+World!";
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p id="demo15"></p>
+
+<script>
+    let xm = 5;
+    if (xm == 19) ;
+    {
+        document.getElementById("demo15").innerHTML = "Hello";
+    }
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>This example will return a correct result:</p>
+<p id="demo16"></p>
+
+<script>
+    document.getElementById("demo16").innerHTML = myFunction(55);
+
+    function myFunction(a) {
+        let power = 10
+        return a * power
+    }
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>This example will return a correct result:</p>
+<p id="demo17"></p>
+
+<script>
+    document.getElementById("demo17").innerHTML = myFunction(55);
+
+    function myFunction(ab) {
+        let power = 10;
+        return ab * power;
+    }
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>This example will return a correct result:</p>
+<p id="demo18"></p>
+
+<script>
+    document.getElementById("demo18").innerHTML = myFunction(55);
+
+    function myFunction(ac) {
+        let
+            power = 10;
+        return ac * power;
+    }
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>This example will return undefined:</p>
+<p id="demo19"></p>
+
+<script>
+    document.getElementById("demo19").innerHTML = myFunction(55);
+
+    function myFunction(ad) {
+        let
+            power = 10;
+        return
+        ad * power;
+    }
+</script>
+
+
+<h2>Common JavaScript Mistakes</h2>
+<p>This example will return undefined:</p>
+<p id="demo20"></p>
+
+<script>
+    document.getElementById("demo20").innerHTML = myFunction(55);
+
+    function myFunction(ae) {
+        let
+            power = 10;
+        return;
+        ae * power;
+    }
+</script>
+
+
+<h2>JavaScript Arrays</h2>
+<p id="demo21"></p>
+
+<script>
+    const person = [];
+    person[0] = "John";
+    person[1] = "Doe";
+    person[2] = 46;
+    document.getElementById("demo21").innerHTML =
+        person[0] + " " + person.length;
+</script>
+
+
+<h2>JavaScript Arrays</h2>
+<p>If you use a named index when accessing an array, JavaScript will redefine the array to a standard object, and some
+    array methods and properties will produce undefined or incorrect results.</p>
+<p id="demo22"></p>
+
+<script>
+    const personA = [];
+    personA["firstName"] = "John";
+    personA["lastName"] = "Doe";
+    personA["age"] = 46;
+    document.getElementById("demo22").innerHTML =
+        personA[0] + " " + personA.length;
+</script>
+
+
+<h2>JavaScript Objects</h2>
+<p>To test if an object does not exist, test if the type is undefined:</p>
+<p id="demo23"></p>
+
+<script>
+    document.getElementById("demo23").innerHTML = typeof myObj === "undefined";
+</script>
+
+
+<h2>JavaScript Objects</h2>
+<p>If you want to test if an object is not null, you must test if it not undefined first.</p>
+<p id="demo24"></p>
+
+<script>
+    document.getElementById("demo24").innerHTML = typeof myObj !== "undefined" && myObj !== null;
+</script>
+</body>
+</html>

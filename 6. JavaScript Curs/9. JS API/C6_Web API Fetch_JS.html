@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- FUNCTIONEAZA DOAR CU LIVE SERVER !!!
+
+  http://localhost:5500/C6_Web API Fetch_JS.html
+  http://127.0.0.1:5500/C6_Web API Fetch_JS.html
+-->
+
+
+<p id="demo1">Fetch a file to change this text.</p>
+<script>
+
+    let file = "fetch_info.txt"
+
+    fetch(file)
+        .then(x => x.text())
+        .then(y => document.getElementById("demo1").innerHTML = y);
+</script>
+
+
+<p id="demo2">Fetch a file to change this text.</p>
+
+<script>
+    getText("fetch_info.txt");
+
+    async function getText(file) {
+        let x = await fetch(file);
+        let y = await x.text();
+        document.getElementById("demo2").innerHTML = y;
+    }
+</script>
+
+
+<p id="demo3">Fetch a file to change this text.</p>
+
+<script>
+    getText("fetch_info.txt");
+
+    async function getText(file) {
+        let myObject = await fetch(file);
+        let myText = await myObject.text();
+        document.getElementById("demo3").innerHTML = myText;
+    }
+</script>
+</body>
+</html>

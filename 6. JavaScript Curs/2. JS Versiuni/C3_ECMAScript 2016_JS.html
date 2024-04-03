@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The ** Operator</h2>
+<p id="demo1"></p>
+
+<script>
+    let x = 5;
+    let z = x ** 2;
+    document.getElementById("demo1").innerHTML = z;
+</script>
+
+
+<h2>Math.pow()</h2>
+<p id="demo2"></p>
+
+<script>
+    let xa = 5;
+    let za = Math.pow(x, 2)
+    document.getElementById("demo2").innerHTML = za;
+</script>
+
+
+<h2>Exponentiation Assignment (**=)</h2>
+<p id="demo3"></p>
+
+<script>
+    let xb = 5;
+    xb **= 2;
+    document.getElementById("demo3").innerHTML = xb;
+</script>
+
+
+<h1>Array includes()</h1>
+<p>Check if the fruit array contains "Mango":</p>
+<p id="demo4"></p>
+<p><strong>Note:</strong> The includes method is not supported in Edge 13 (and earlier versions).</p>
+
+<script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo4").innerHTML = fruits.includes("Mango");
+</script>
+</body>
+</html>

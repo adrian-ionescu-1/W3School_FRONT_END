@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+<p id="intro">Finding HTML Elements by Id</p>
+<p>This example demonstrates the <b>getElementsById</b> method.</p>
+<p id="demo1"></p>
+
+<script>
+    const element = document.getElementById("intro");
+
+    document.getElementById("demo1").innerHTML =
+        "The text from the intro paragraph is: " + element.innerHTML;
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Finding HTML Elements by Tag Name.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+<p id="demo2"></p>
+
+<script>
+    const elementA = document.getElementsByTagName("p");
+
+    document.getElementById("demo2").innerHTML = 'The text in first paragraph (index 0) is: ' + elementA[0].innerHTML;
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<div id="main">
+    <p>Finding HTML Elements by Tag Name</p>
+    <p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+<p id="demo3"></p>
+
+<script>
+    const x = document.getElementById("main");
+    const y = x.getElementsByTagName("p");
+
+    document.getElementById("demo3").innerHTML =
+        'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Finding HTML Elements by Class Name.</p>
+<p class="intro">Hello World!</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+<p id="demo4"></p>
+
+<script>
+    const xa = document.getElementsByClassName("intro");
+    document.getElementById("demo4").innerHTML =
+        'The first paragraph (index 0) with class="intro" is: ' + xa[0].innerHTML;
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Finding HTML Elements by Query Selector</p>
+<p class="intro">Hello World!.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+<p id="demo5"></p>
+
+<script>
+    const xb = document.querySelectorAll("p.intro");
+    document.getElementById("demo5").innerHTML =
+        'The first paragraph (index 0) with class="intro" is: ' + xb[0].innerHTML;
+</script>
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Finding HTML Elements Using <b>document.forms</b>.</p>
+<form id="frm1" action="/action_page.php">
+    First name: <input type="text" name="fname" value="Donald"><br>
+    Last name: <input type="text" name="lname" value="Duck"><br><br>
+    <input type="submit" value="Submit">
+</form>
+<p>These are the values of each element in the form:</p>
+<p id="demo6"></p>
+
+<script>
+    const xc = document.forms["frm1"];
+    let text = "";
+    for (let i = 0; i < xc.length; i++) {
+        text += xc.elements[i].value + "<br>";
+    }
+    document.getElementById("demo6").innerHTML = text;
+</script>
+
+
+<h2>Finding HTML Elements Using document.anchors</h2>
+<a name="html">HTML Tutorial</a><br>
+<a name="css">CSS Tutorial</a><br>
+<a name="xml">XML Tutorial</a><br>
+<p id="demo7"></p>
+
+<script>
+    document.getElementById("demo7").innerHTML =
+        "Number of anchors are: " + document.anchors.length;
+</script>
+
+
+<h2>JavaScript HTMLDOM</h2>
+<p>Displaying document.body</p>
+<p id="demo8"></p>
+
+<script>
+    document.getElementById("demo8").innerHTML = document.body.innerHTML;
+</script>
+
+
+<h2>JavaScript HTMLDOM</h2>
+<p>Displaying document.documentElement</p>
+<p id="demo9"></p>
+
+<script>
+    document.getElementById("demo9").innerHTML = document.documentElement.innerHTML;
+</script>
+
+
+<h2>JavaScript HTMLDOM</h2>
+<p id="demo10"></p>
+
+<script>
+    document.getElementById("demo10").innerHTML =
+        "Number of embeds: " + document.embeds.length;
+</script>
+
+
+<h2>Finding HTML Elements Using document.forms</h2>
+<form action="">
+    First name: <input type="text" name="fname" value="Donald">
+    <input type="submit" value="Submit">
+</form>
+<p id="demo11"></p>
+
+<script>
+    document.getElementById("demo11").innerHTML =
+        "Number of forms: " + document.forms.length;
+</script>
+
+
+<head>
+    <title>W3Schools Demo</title>
+</head>
+<h2>JavaScript HTMLDOM</h2>
+<p id="demo12"></p>
+
+<script>
+    document.getElementById("demo12").innerHTML =
+        document.head;
+</script>
+
+
+<h2>Finding HTML Elements Using document.images</h2>
+<img src="pic_htmltree.gif" width="486" height="266">
+<img src="pic_navigate.gif" width="362" height="255">
+<p id="demo13"></p>
+
+<script>
+    document.getElementById("demo13").innerHTML =
+        "Number of images: " + document.images.length;
+</script>
+
+
+<h2>Finding HTML Elements Using document.links</h2>
+<p>
+    <a href="/html/default.asp">HTML</a>
+    <br>
+    <a href="/css/default.asp">CSS</a>
+</p>
+<p id="demo14"></p>
+
+<script>
+    document.getElementById("demo14").innerHTML =
+        "Number of links: " + document.links.length;
+</script>
+
+
+<h2>Finding HTML Elements Using document.scripts</h2>
+<p id="demo15"></p>
+
+<script>
+    document.getElementById("demo15").innerHTML =
+        "Number of scripts: " + document.scripts.length;
+</script>
+
+
+<head>
+    <title>W3Schools Demo</title>
+</head>
+<h2>Finding HTML Elements Using document.title</h2>
+<p id="demo16"></p>
+
+<script>
+    document.getElementById("demo16").innerHTML =
+        "The title of this document is: " + document.title;
+</script>
+</body>
+</html>

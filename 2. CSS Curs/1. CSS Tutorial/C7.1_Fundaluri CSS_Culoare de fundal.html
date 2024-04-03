@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            background-color: orange;
+        }
+
+        /*div {
+          background-color: green;
+        }
+
+        div.first {
+          opacity: 0.1;
+        }
+
+        div.second {
+          opacity: 0.3;
+        }
+
+        div.third {
+          opacity: 0.6;
+        }*/
+
+        p {
+            background-color: yellow;
+        }
+
+        div {
+            background: rgb(0, 128, 0);
+        }
+
+        div.first {
+            background: rgba(0, 128, 0, 0.1);
+        }
+
+        div.second {
+            background: rgba(0, 128, 0, 0.3);
+        }
+
+        div.third {
+            background: rgba(0, 128, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hello World!</h1>
+
+<p>This page has a light blue background color!</p>
+
+<h1>CSS background-color example!</h1>
+<div>
+    <h1>Hello World!</h1>
+    This is a text inside a div element.
+    <p>This paragraph has its own background color.</p>
+    We are still in the div element.
+</div>
+
+
+<h2>Transparent Boxes</h2>
+
+<p>When using the opacity property to add transparency to the background of an element, all of its child elements become
+    transparent as well. This can make the text inside a fully transparent element hard to read:</p>
+
+<div class="first">
+    <h2>opacity 0.1</h2>
+</div>
+
+<div class="second">
+    <h2>opacity 0.3</h2>
+</div>
+
+<div class="third">
+    <h2>opacity 0.6</h2>
+</div>
+
+<div>
+    <h2>opacity 1 (default)</h2>
+</div>
+
+
+<h3>Transparent Boxes 2</h3>
+
+<p>Result with opacity:</p>
+
+<div style="opacity:0.1;">
+    <h3>10% opacity</h3>
+</div>
+
+<div style="opacity:0.3;">
+    <h3>30% opacity</h3>
+</div>
+
+<div style="opacity:0.6;">
+    <h3>60% opacity</h3>
+</div>
+
+<div>
+    <h3>opacity 1</h3>
+</div>
+
+<p>Result with rgba():</p>
+
+<div class="first">
+    <h3>10% opacity</h3>
+</div>
+
+<div class="second">
+    <h3>30% opacity</h3>
+</div>
+
+<div class="third">
+    <h3>60% opacity</h3>
+</div>
+
+<div>
+    <h3>default</h3>
+</div>
+
+<p>Notice how the text gets transparent as well as the background color when using the opacity property.</p>
+</body>
+</html>

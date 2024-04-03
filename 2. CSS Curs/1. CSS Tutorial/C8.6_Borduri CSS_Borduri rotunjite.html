@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p.normal {
+            border: 2px solid red;
+            padding: 5px;
+        }
+
+        p.round1 {
+            border: 2px solid red;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        p.round2 {
+            border: 2px solid red;
+            border-radius: 8px;
+            padding: 5px;
+        }
+
+        p.round3 {
+            border: 2px solid red;
+            border-radius: 12px;
+            padding: 5px;
+        }
+
+        p.one {
+            border-style: solid;
+            border-top: thick double #ff0000;
+        }
+
+        p {
+            border-style: solid;
+        }
+
+        p.none {
+            border-bottom-style: none;
+        }
+
+        p.dotted {
+            border-bottom-style: dotted;
+        }
+
+        p.dashed {
+            border-bottom-style: dashed;
+        }
+
+        p.solid {
+            border-bottom-style: solid;
+        }
+
+        p.double {
+            border-bottom-style: double;
+        }
+
+        p.groove {
+            border-bottom-style: groove;
+        }
+
+        p.ridge {
+            border-bottom-style: ridge;
+        }
+
+        p.inset {
+            border-bottom-style: inset;
+        }
+
+        p.outset {
+            border-bottom-style: outset;
+        }
+
+        p.two {
+            border-style: solid;
+            border-left-width: 15px;
+        }
+
+        p.three {
+            border-style: solid;
+            border-color: #0000ff;
+        }
+
+        p.four {
+            border-style: solid;
+            border-color: #ff0000 #0000ff;
+        }
+
+        p.four {
+            border-style: solid;
+            border-color: #ff0000 #00ff00 #0000ff;
+        }
+
+        p.six {
+            border-style: solid;
+            border-color: #ff0000 #00ff00 #0000ff rgb(250, 0, 255);
+        }
+
+        p.seven {
+            border-style: solid;
+            border-right-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+
+<h2>The border-radius Property</h2>
+<p>This property is used to add rounded borders to an element:</p>
+
+<p class="normal">Normal border</p>
+<p class="round1">Round border</p>
+<p class="round2">Rounder border</p>
+<p class="round3">Roundest border</p>
+
+
+<p class="one">This is some text in a paragraph.</p>
+
+
+<p class="none">No bottom border.</p>
+<p class="dotted">A dotted bottom border.</p>
+<p class="dashed">A dashed bottom border.</p>
+<p class="solid">A solid bottom border.</p>
+<p class="double">A double bottom border.</p>
+<p class="groove">A groove bottom border.</p>
+<p class="ridge">A ridge bottom border.</p>
+<p class="inset">An inset bottom border.</p>
+<p class="outset">An outset bottom border.</p>
+
+
+<p class="two"><b>Note:</b> The "border-left-width" property does not work if it is used alone. Use the "border-style"
+    property to set the borders first.</p>
+
+
+<p class="three">One-colored border!</p>
+<p class="four">Two-colored border!</p>
+<p class="five">Three-colored border!</p>
+<p class="six">Four-colored border!</p>
+<p><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" property to set
+    the borders first.</p>
+
+
+<p class="seven">This is some text in a paragraph.</p>
+
+</body>
+</html>

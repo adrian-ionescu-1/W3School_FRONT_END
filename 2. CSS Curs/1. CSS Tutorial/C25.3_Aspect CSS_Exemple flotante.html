@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .box1 {
+            float: left;
+            width: 33.33%;
+            padding: 50px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .img-container {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .box2 {
+            float: left;
+            width: 50%;
+            padding: 50px;
+            height: 300px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: DodgerBlue;
+        }
+
+        .flex-container .box3 {
+            background-color: #f1f1f1;
+            width: 50%;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .lista2 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .lista2 {
+            float: left;
+        }
+
+        .lista2 a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .lista2 a:hover {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: red;
+        }
+
+        .header, .footer {
+            background-color: grey;
+            color: white;
+            padding: 15px;
+        }
+
+        /*body {
+          margin: 0;
+        }
+
+        .column {
+          float: left;
+          padding: 15px;
+        }*/
+
+        .menu {
+            width: 25%;
+        }
+
+        .content {
+            width: 75%;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 8px;
+            background-color: #33b5e5;
+            color: #ffffff;
+        }
+
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+
+        img.one {
+            float: right;
+            border: 1px dotted black;
+            margin: 0px 0px 15px 20px;
+        }
+
+        div.test1 {
+            float: right;
+            width: 120px;
+            margin: 0 0 15px 20px;
+            padding: 15px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        span {
+            float: left;
+            width: 0.7em;
+            font-size: 400%;
+            font-family: algerian, courier;
+            line-height: 80%;
+        }
+
+        .header {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .footer {
+            background-color: #444;
+            color: white;
+            padding: 15px;
+        }
+
+        .topmenu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #777;
+        }
+
+        .topmenu li {
+            float: left;
+        }
+
+        .topmenu li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .topmenu li a:hover {
+            background-color: #222;
+        }
+
+        .topmenu li a.active {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        .column {
+            float: left;
+            padding: 15px;
+        }
+
+        .sidemenu {
+            width: 25%;
+        }
+
+        .content {
+            width: 75%;
+        }
+
+        .sidemenu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidemenu li a {
+            margin-bottom: 4px;
+            display: block;
+            padding: 8px;
+            background-color: #eee;
+            text-decoration: none;
+            color: #666;
+        }
+
+        .sidemenu li a:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .sidemenu li a.active {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Grid of Boxes</h2>
+<p>Float boxes side by side:</p>
+
+<div class="clearfix">
+    <div class="box1" style="background-color:#bbb">
+        <p>Some text inside the box.</p>
+    </div>
+    <div class="box1" style="background-color:#ccc">
+        <p>Some text inside the box.</p>
+    </div>
+    <div class="box1" style="background-color:#ddd">
+        <p>Some text inside the box.</p>
+    </div>
+</div>
+
+<p><strong>Note:</strong> Here, we use the clearfix hack to take care of the layout flow.
+    We also use the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove this
+    code to see the effect.</p>
+
+
+<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
+
+<div class="clearfix">
+    <div class="img-container">
+        <img src="img_5terre.jpg" alt="Italy" style="width:100%">
+    </div>
+    <div class="img-container">
+        <img src="img_forest.jpg" alt="Forest" style="width:100%">
+    </div>
+    <div class="img-container">
+        <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    </div>
+</div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to
+    make sure that the image container doesn't break due to extra padding. Try to remove this code to see the
+    effect.</p>
+
+
+<h2>Equal Height Boxes</h2>
+<p>Floating boxes with equal heights:</p>
+
+<div class="clearfix">
+    <div class="box2" style="background-color:#bbb">
+        <h2>Box 1</h2>
+        <p>Some content, some content, some content</p>
+    </div>
+    <div class="box2" style="background-color:#ccc">
+        <h2>Box 2</h2>
+        <p>Some content, some content, some content</p>
+        <p>Some content, some content, some content</p>
+        <p>Some content, some content, some content</p>
+    </div>
+</div>
+
+<p>This example not very flexible. It is ok to use CSS height if you can guarantee that the boxes will always have the
+    same amount of content in them, but that's not always the case. If you try the example above on a mobile phone (or
+    resize the browser window), you will see that the second box's content will be displayed outside of the box.</p>
+<p>Go back to the tutorial and find another solution, if this is not what you want.</p>
+
+
+<h1>Flexible Boxes</h1>
+
+<div class="flex-container">
+    <div class="box3">Box 1 - This is some text to make sure that the content gets really tall. This is some text to
+        make sure that the content gets really tall.
+    </div>
+    <div class="box3">Box 2 - My height will follow Box 1.</div>
+</div>
+
+<p>Try to resize the browser window to see the flexible layout.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+
+<ul>
+    <li class="lista2"><a href="#home" class="active">Home</a></li>
+    <li class="lista2"><a href="#news">News</a></li>
+    <li class="lista2"><a href="#contact">Contact</a></li>
+    <li class="lista2"><a href="#about">About</a></li>
+</ul>
+<br clear="all">
+
+<div class="header">
+    <h1>Chania</h1>
+</div>
+
+<div class="clearfix">
+    <div class="column menu">
+        <ul>
+            <li>The Flight</li>
+            <li>The City</li>
+            <li>The Island</li>
+            <li>The Food</li>
+        </ul>
+    </div>
+
+    <div class="column content">
+        <h1>The City</h1>
+        <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the
+            old town and the modern city.</p>
+        <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Footer Text</p>
+</div>
+
+<h2>Let an image float to the right in a paragraph</h2>
+
+<p>In the paragraph below, the image will float to the right. A dotted black border is added to the image.
+    We have also added margins to the image to push the text away from the image:
+    0 px margin on the top and right side, 15 px margin on the bottom, and 20 px margin on the left side of the image.
+</p>
+
+<p><img class="one" src="w3css.gif" width="100" height="140">
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+</p>
+<br clear="all">
+
+
+<h2>Let an image with a caption float to the right</h2>
+
+<p>In the paragraph below, the div element is 120 pixels wide and it contains the image. The div element will float to
+    the right. Margins are added to the div to push the text away from the div. Borders and padding are added to the div
+    to frame in the picture and the caption.</p>
+
+<div class="test1">
+    <img class="two" src="w3css.gif" width="100" height="140"><br>CSS is fun!
+</div>
+
+<p>
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+    This is some text. This is some text. This is some text.
+</p>
+<br clear="all">
+
+
+<h2>Style the first letter of a paragraph and let it float left</h2>
+
+<p>
+    <span>H</span>ere, the first letter of this text is embedded in a span element. The span element has a width that is
+    0.7 times the size of the current font. The font-size of the span element is 400% (quite large) and the line-height
+    is 80%. The font of the letter in the span will be in "Algerian".
+</p>
+<br clear="all">
+
+
+<ul class="topmenu">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+
+<div class="clearfix">
+    <div class="column sidemenu">
+        <ul>
+            <li><a href="#flight">The Flight</a></li>
+            <li><a href="#city" class="active">The City</a></li>
+            <li><a href="#island">The Island</a></li>
+            <li><a href="#food">The Food</a></li>
+            <li><a href="#people">The People</a></li>
+            <li><a href="#history">The History</a></li>
+            <li><a href="#oceans">The Oceans</a></li>
+        </ul>
+    </div>
+
+    <div class="column content">
+        <div class="header">
+            <h1>The City</h1>
+        </div>
+        <h1>Chania</h1>
+        <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the
+            old town and the modern city.</p>
+        <p>You will learn more about responsive web pages in a later chapter.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Footer Text</p>
+</div>
+</body>
+</html>

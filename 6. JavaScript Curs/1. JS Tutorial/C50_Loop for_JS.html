@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+<p id="demo1"></p>
+
+<script>
+    const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+    let text = "";
+    for (let i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+    }
+
+    document.getElementById("demo1").innerHTML = text;
+</script>
+
+
+<h2>JavaScript For Loop</h2>
+<p id="demo2"></p>
+
+<script>
+    let text2 = "";
+
+    for (let i = 0; i < 5; i++) {
+        text2 += "The number is " + i + "<br>";
+    }
+
+    document.getElementById("demo2").innerHTML = text2;
+</script>
+
+
+<h2>JavaScript For Loop</h2>
+<p id="demo3"></p>
+
+<script>
+    const carsA = ["BMW", "Volvo", "Saab", "Ford"];
+    let i, len, textA;
+    for (i = 0, len = cars.length, textA = ""; i < len; i++) {
+        textA += cars[i] + "<br>";
+    }
+    document.getElementById("demo3").innerHTML = textA;
+</script>
+
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo4"></p>
+
+<script>
+    const carsB = ["BMW", "Volvo", "Saab", "Ford"];
+    let i1 = 2;
+    let len1 = carsB.length;
+    let textB = "";
+
+    for (; i1 < len1; i1++) {
+        textB += cars[i1] + "<br>";
+    }
+
+    document.getElementById("demo4").innerHTML = textB;
+</script>
+
+
+<h2>JavaScript For Loop</h2>
+<p id="demo5"></p>
+
+<script>
+    const carsC = ["BMW", "Volvo", "Saab", "Ford"];
+
+    let iC = 0;
+    let lenC = cars.length;
+    let textC = "";
+
+    for (; iC < lenC;) {
+        textC += cars[iC] + "<br>";
+        iC++;
+    }
+    document.getElementById("demo5").innerHTML = textC;
+</script>
+
+
+<h2>JavaScript let</h2>
+<p id="demo6"></p>
+
+<script>
+    var i2 = 5;
+    for (var i2 = 0; i2 < 10; i2++) {
+        // some statements
+    }
+    document.getElementById("demo6").innerHTML = i2;
+</script>
+
+
+<h2>JavaScript let</h2>
+<p id="demo7"></p>
+
+<script>
+    let i3 = 5;
+    for (let i3 = 0; i3 < 10; i3++) {
+        // some statements
+    }
+    document.getElementById("demo7").innerHTML = i3;
+</script>
+</body>
+</html>
